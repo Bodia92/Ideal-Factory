@@ -23,5 +23,6 @@
 .section_in {
 	max-width: $page_width;
 	width: 100%;
+	height: var(--full-screen);
 	margin: 0 auto;
 }
