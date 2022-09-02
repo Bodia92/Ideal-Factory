@@ -3,23 +3,5 @@ extends ../layout/_layout
 block vars
 	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Ideal-Factory', template_name: 'IndexPage'}
 block content_block
-	section.section.main_section
-		.section_in
-			.main_section__body
-				.main_section__content
-					a.main_section__logo(href="#")
-						img(src="images/logo.svg", class="logo" alt="logo")
-					h1.main_section_title Where imagination & creativity come to life
-					button.main_section__btn Scroll
-				.main_section__image
-					+picture({
-						media: 1024,
-						is2x: false,
-						class: 'main_section__img',
-						img_class: 'main_section__img',
-						img: 'section-image/item1.jpg',
-						img_mob: 'mob_img_name.png',
-						alt: 'Image description',
-					})
-
-
+	include ../blocks/main_section.pug
+	button.main__btn.btn_base(type="button") Scroll

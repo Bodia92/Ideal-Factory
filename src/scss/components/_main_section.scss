@@ -1,0 +1,52 @@
+@import "ScssHelpers/helpers_all";
+
+.main_section {
+	padding-left: 5rem;
+}
+
+.main_section__body {
+	display: flex;
+	align-items: center;
+}
+
+.main_section__content {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	padding: 5rem 0;
+	margin-right: auto;
+}
+
+.main_section__logo {
+	flex-shrink: 0;
+	width: 3.6rem;
+	height: 4rem;
+}
+
+.main_section_title {
+	max-width: 80rem;
+	margin: auto 0;
+	font-size: 6rem;
+	line-height: 1.25;
+}
+
+.main_section__btn {
+}
+
+.main_section__image {
+	position: relative;
+	display: block;
+	width: 35%;
+	height: 100vh;
+	flex-shrink: 0;
+}
+
+.main_section__image_in {
+	display: block;
+}
+.main_section__image_img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	@extend %cover_img;
+}

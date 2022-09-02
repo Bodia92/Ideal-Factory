@@ -9,33 +9,34 @@
 
 	cursor: pointer;
 
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		text-decoration: none;
 	}
 }
 
 //color extends
 %blue_btn_1 {
-	font-weight: 700;
-	color: $white;
-	background-color: $color_link_base;
-	transition: background-color .3s ease;
+	font-weight: 500;
+	color: $color_link_base;
+	background-color: #657de9;
+	transition: background-color 0.3s ease, color 0.3s ease;
 
 	@include st_btn();
 
 	&:hover {
-		background-color: darken($color_link_base, 10%);
+		background-color: $black;
+		color: #657de9;
 	}
-
 }
 
 //size extends
 %btn_size_1 {
-	height: 4rem;
-	padding: 0 1.2rem;
+	height: 4.4rem;
+	padding: 1rem 2rem;
 
-	line-height: 4rem;
-	font-size: 1.6rem;
+	line-height: 2.4rem;
+	font-size: 1.4rem;
 
-	border-radius: $gl_radius;
+	border-radius: 10rem;
 }

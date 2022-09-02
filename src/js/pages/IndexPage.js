@@ -1,5 +1,6 @@
 import { GLOBAL_VARS } from 'utils/constants';
 import { documentReady, pageLoad } from 'utils';
+import mainSection from '../components/mainSection';
 
 export default class IndexPage {
 	constructor() {
@@ -8,6 +9,7 @@ export default class IndexPage {
 
 	loadFunc() {
 		console.log('index page load');
+		mainSection();
 	}
 
 	init() {
