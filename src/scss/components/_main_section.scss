@@ -5,13 +5,11 @@
 }
 
 .main_section__body {
-	display: flex;
-	align-items: center;
+	@include flex_block(row, nowrap, flex-start, center);
 }
 
 .main_section__content {
-	display: flex;
-	flex-direction: column;
+	@include flex_block(column, nowrap, flex-start);
 	height: 100vh;
 	padding: 5rem 0;
 	margin-right: auto;
