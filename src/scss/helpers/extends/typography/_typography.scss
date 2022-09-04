@@ -8,3 +8,21 @@
 %title_offset {
 	margin-bottom: 2rem;
 }
+
+%title_style {
+	font-size: 6rem;
+	line-height: 1.25;
+}
+
+%image_full_screen {
+	flex-shrink: 0;
+	position: relative;
+	display: block;
+	height: 100vh;
+}
+
+%text_style {
+	font-weight: 500;
+	font-size: 1.4rem;
+	line-height: 2.4;
+}
