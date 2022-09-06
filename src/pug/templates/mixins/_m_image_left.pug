@@ -1,0 +1,21 @@
+mixin image_left (array)
+	section.section.image_left
+		.section_in
+			each item in array
+				.image_left_in
+					if item.image
+						.image_left__body_img
+							+picture({
+								img: item.image,
+								class: 'image_left__img_in',
+								img_class: 'image_left__img',
+								alt: 'image item',
+							})
+					.image_left__content
+						if item.buttom
+							.image_left__button
+								button.image_left__button_btn(type="buttom")= item.buttom
+						if item.title
+							h3.image_left__title= item.title
+						if item.text
+							h3.image_left__text!= item.text

@@ -1,7 +1,6 @@
 @import "ScssHelpers/helpers_all";
 
 .image_section {
-	padding-left: 5rem;
 	background-color: $section_bg;
 }
 
@@ -13,7 +12,7 @@
 	@include flex_block(column, nowrap, flex-start);
 	width: 33.333%;
 	height: 100vh;
-	padding: 5rem 0;
+	padding: 5rem;
 }
 
 .image_section__logo {
@@ -32,16 +31,18 @@
 .image_section_title {
 	margin: auto 0;
 	color: $white;
+	font-size: 5rem;
 	@extend %title_style;
 }
 
 .image_section__image {
+	flex-shrink: 0;
 	width: 33.333%;
-	@extend %image_full_screen;
 }
 
 .image_section__image_in {
 	display: block;
+	@extend %image_full_screen;
 }
 .image_section__image_img {
 	position: absolute;

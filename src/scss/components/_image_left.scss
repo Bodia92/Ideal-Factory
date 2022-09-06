@@ -1,0 +1,50 @@
+@import "ScssHelpers/helpers_all";
+
+.image_left_in {
+	@include flex_block(row, nowrap, flex-start);
+}
+
+.image_left__body_img {
+	flex-shrink: 0;
+	width: 33.333%;
+}
+
+.image_left__img_in {
+	// display: block;
+	@extend %image_full_screen;
+}
+
+.image_left__img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	@extend %cover_img;
+}
+
+.image_left__content {
+	padding: 5rem;
+	@include flex_block(column, nowrap, flex-start);
+}
+
+.image_left__button {
+	align-self: end;
+}
+
+.image_left__button_btn {
+	@extend %blue_btn_1;
+	@extend %btn_size_1;
+}
+
+.image_left__title {
+	max-width: 46rem;
+	@extend %title_style;
+}
+
+.image_left__text {
+	@extend %text_style;
+	p {
+		&:not(:last-child) {
+			margin-bottom: 3rem;
+		}
+	}
+}

@@ -1,7 +1,6 @@
 @import "ScssHelpers/helpers_all";
 
 .main_section {
-	padding-left: 5rem;
 }
 
 .main_section__body {
@@ -11,7 +10,7 @@
 .main_section__content {
 	@include flex_block(column, nowrap, flex-start);
 	height: 100vh;
-	padding: 5rem 0;
+	padding: 5rem;
 	margin-right: auto;
 }
 
@@ -36,12 +35,13 @@
 }
 
 .main_section__image {
+	flex-shrink: 0;
 	width: 33.333%;
-	@extend %image_full_screen;
 }
 
 .main_section__image_in {
 	display: block;
+	@extend %image_full_screen;
 }
 .main_section__image_img {
 	position: absolute;
