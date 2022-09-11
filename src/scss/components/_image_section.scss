@@ -36,18 +36,13 @@
 }
 
 .image_section__image {
-	flex-shrink: 0;
-	width: 33.333%;
+	@extend %image_full_screen;
 }
 
 .image_section__image_in {
-	display: block;
-	@extend %image_full_screen;
+	@extend %image_size;
 }
 .image_section__image_img {
-	position: absolute;
-	top: 0;
-	left: 0;
 	@extend %cover_img;
 }
 .image_section__text {

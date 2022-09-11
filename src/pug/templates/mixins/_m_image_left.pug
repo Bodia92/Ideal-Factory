@@ -3,19 +3,29 @@ mixin image_left (array)
 		.section_in
 			each item in array
 				.image_left_in
-					if item.image
+					if item.image_left
 						.image_left__body_img
 							+picture({
-								img: item.image,
+								img: item.image_left,
 								class: 'image_left__img_in',
 								img_class: 'image_left__img',
 								alt: 'image item',
 							})
-					.image_left__content
+					.image_left__content(class=item.style_mod)
 						if item.buttom
 							.image_left__button
 								button.image_left__button_btn(type="buttom")= item.buttom
 						if item.title
 							h3.image_left__title= item.title
+								if item.text_decor
+									span.image_left__title_decor= item.text_decor
 						if item.text
-							h3.image_left__text!= item.text
+							h3.image_left__text(class=item.style_text_mod)!= item.text
+					if item.image_right
+						.image_left__body_img
+							+picture({
+								img: item.image_right,
+								class: 'image_left__img_in',
+								img_class: 'image_left__img',
+								alt: 'image item',
+							})
