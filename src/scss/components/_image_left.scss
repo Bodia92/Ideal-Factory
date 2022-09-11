@@ -69,6 +69,11 @@
 
 	@extend %text_style;
 
+	display: -webkit-box;
+	-webkit-line-clamp: 12;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+
 	&.image_left__text--style_2_mod {
 		margin-left: 0;
 		max-width: 100%;
