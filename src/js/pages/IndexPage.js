@@ -3,6 +3,7 @@ import { documentReady, pageLoad } from 'utils';
 import mainSection from '../components/mainSection';
 import imageSection from '../components/imageSection';
 import imageLeft from '../components/imageLeft';
+import someSlider from '../components/sliderSection';
 
 export default class IndexPage {
 	constructor() {
@@ -14,6 +15,7 @@ export default class IndexPage {
 		mainSection();
 		imageSection();
 		imageLeft();
+		someSlider();
 	}
 
 	init() {
