@@ -1,0 +1,22 @@
+@import "ScssHelpers/helpers_all";
+
+.scrollbar_section {
+	margin: auto 0;
+}
+
+.scrollbar_section_slide {
+	height: 58rem;
+	margin-bottom: 6rem;
+}
+
+.scrollbar_section__image {
+	width: 100%;
+}
+
+.scrollbar_section__image_in {
+	@extend %image_size;
+}
+
+.scrollbar_section__image_img {
+	@extend %cover_img;
+}
