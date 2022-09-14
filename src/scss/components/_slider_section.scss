@@ -1,0 +1,78 @@
+@import "ScssHelpers/helpers_all";
+
+.slider_section {
+	position: relative;
+	background-color: $section_bg;
+}
+
+.slider_section__body {
+	@include flex_block(row, nowrap, flex-start);
+}
+
+.slider_section_title {
+	width: 33.333%;
+	margin: auto 0;
+	padding: 5rem;
+	color: $white;
+	font-size: 5rem;
+	@extend %title_style;
+}
+
+.slider_section__image {
+	@extend %image_full_screen;
+}
+
+.slider_section__image_in {
+	@extend %image_size;
+}
+
+.slider_section__image_img {
+	@extend %cover_img;
+}
+
+.slider_section__content {
+	width: 33.333%;
+	margin-top: auto;
+	padding: 5rem 5rem 10%;
+}
+
+.slider_section__content_title {
+	font-size: 2.4rem;
+	line-height: 3.4;
+	color: $white;
+}
+.slider_section__content_text {
+	color: $white;
+	@extend %text_style;
+}
+
+.slider_section_arrows {
+	position: absolute;
+	right: 22%;
+	bottom: 5rem;
+	@extend %global_flex_block_row_nowrap_flex-start_center;
+}
+
+.slider_section_arrow {
+	z-index: 100;
+	width: 4rem;
+	height: 4rem;
+	padding: 1.2rem;
+	color: $white;
+	background-color: #647de8;
+	border-radius: 50%;
+	cursor: pointer;
+	&:not(:last-child) {
+		margin-right: 4rem;
+	}
+}
+
+.slider_section_arrow--prev {
+}
+
+.slider_section_arrow--next {
+}
+
+.swiper-button-disabled {
+	opacity: 0.5;
+}

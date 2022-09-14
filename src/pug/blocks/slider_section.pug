@@ -1,10 +1,48 @@
-.slider_wrap
-	.slider_arrow.slider_arrow--prev
-	.slider_arrow.slider_arrow--next
-	.slider_list.someSlider
-		+loop_while(14)
-			li.slider_item
-				h1= `hello ${i}`
-				p text here
-				img(src="section-image/item1.jpg", alt="")
-	.slider_dots
+.section.slider_section
+	.section_in
+		.slider_section_arrows
+			button.slider_section_arrow.slider_section_arrow--prev(type='button')
+				+icon( 'arrow-prev' , 'icon--size_mod')
+			button.slider_section_arrow.slider_section_arrow--next(type='button')
+				+icon( 'arrow-next' , 'icon--size_mod')
+		.slider_section_list.someSlider.swiper
+			.slider_section_wrapper.swiper-wrapper
+				.slider_section_slide.swiper-slide
+					.slider_section__body
+						h2.slider_section_title Bespoke made, quality assured
+						.slider_section__image
+							+picture({
+								img: 'section-image/item5.jpg',
+								class: 'slider_section__image_in',
+								img_class: 'slider_section__image_img',
+								alt: 'image slider',
+							})
+						.slider_section__content
+							.slider_section__content_title Limited Editions
+							.slider_section__content_text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus lacinia maecenas sed. Arcu commodo urna, phasellus neque.
+				.slider_section_slide.swiper-slide
+					.slider_section__body
+						h2.slider_section_title A place for makers alike
+						.slider_section__image
+							+picture({
+								img: 'section-image/item4.jpg',
+								class: 'slider_section__image_in',
+								img_class: 'slider_section__image_img',
+								alt: 'image slider',
+							})
+						.slider_section__content
+							.slider_section__content_title Limited
+							.slider_section__content_text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus
+				.slider_section_slide.swiper-slide
+					.slider_section__body
+						h2.slider_section_title Bespoke made, quality assured
+						.slider_section__image
+							+picture({
+								img: 'section-image/item3.jpg',
+								class: 'slider_section__image_in',
+								img_class: 'slider_section__image_img',
+								alt: 'image slider',
+							})
+						.slider_section__content
+							.slider_section__content_title Editions
+							.slider_section__content_text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu nisl morbi odio semper iaculis etiam elit. Arcu enim, et suspendisse condimentum quam elementum lacus, mi, a. Bibendum vitae in eget posuere vitae est. Diam pulvinar turpis rhoncus condimentum. Senectus nam sed etiam lectus mauris aliquet et. Vehicula mauris nullam placerat pretium eleifend.

@@ -1,12 +1,13 @@
+import 'ScssComponents/_slider_section.scss';
 import Swiper, { Navigation, EffectFade } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
-import buildSliders from './buildSwiper';
+// import buildSliders from './buildSwiper';
 
 const someSlider = () => {
 	const sliderClass = '.someSlider';
-	buildSliders(sliderClass);
+	// buildSliders(sliderClass);
 
 	let slideEl = document.querySelectorAll(sliderClass);
 
@@ -16,22 +17,18 @@ const someSlider = () => {
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
+			slidesPerGroup: 1,
 			effect: 'fade',
+			allowTouchMove: false,
 			speed: 800,
+			fadeEffect: {
+				crossFade: true,
+			},
 			// loop: true,
 			navigation: {
-				prevEl: '.slider_arrow--prev',
-				nextEl: '.slider_arrow--next',
+				prevEl: '.slider_section_arrow--prev',
+				nextEl: '.slider_section_arrow--next',
 			},
-			breakpoints: {
-				320: {
-					slidesPerView: 1,
-				},
-				1023: {
-					slidesPerView: 4,
-				},
-			},
-
 		});
 	}
 };
