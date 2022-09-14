@@ -14,14 +14,13 @@ const scrollbarSection = () => {
 			observer: true,
 			observeParents: true,
 			spaceBetween: 20,
-			scrollContainer: true,
 			scrollbar: {
 				el: '.swiper-scrollbar',
 				draggable: true,
 				dragSize: 'auto',
 			},
-			slidesPerView: 3,
-			slidesPerGroup: 3,
+			slidesPerView: 'auto',
+			slidesPerGroup: 1,
 			speed: 800,
 			// loop: true,
 		});

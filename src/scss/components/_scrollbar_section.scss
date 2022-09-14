@@ -1,16 +1,55 @@
 @import "ScssHelpers/helpers_all";
 
+.scrollbar_section_in {
+	@extend %global_flex_block_row_nowrap_flex-start_center;
+}
+
 .scrollbar_section {
-	margin: auto 0;
+	min-width: 0;
+	position: relative;
+	padding-bottom: 5rem;
+	padding-left: 12rem;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 12rem;
+		height: 100%;
+		background-color: $white;
+		z-index: 100;
+	}
+
+	& .swiper-scrollbar {
+		left: 50% !important;
+		width: 90% !important;
+		max-width: 166rem;
+		transform: translateX(-50%);
+		background-color: #e3e3e3;
+	}
+
+	& .swiper-scrollbar-drag {
+		width: 35rem;
+		background-color: #657de9;
+	}
+}
+
+.scrollbar_section_wrapper {
 }
 
 .scrollbar_section_slide {
+	max-width: 74rem;
 	height: 58rem;
-	margin-bottom: 6rem;
+	overflow: hidden;
+	&:nth-child(even) {
+		max-width: 44rem;
+	}
 }
 
 .scrollbar_section__image {
-	width: 100%;
+	display: block;
+	height: 100%;
 }
 
 .scrollbar_section__image_in {
@@ -19,4 +58,11 @@
 
 .scrollbar_section__image_img {
 	@extend %cover_img;
+	object-position: center;
+}
+
+.scrollbar_section_body {
+	max-width: 166rem;
+	width: 90%;
+	margin: 0 auto;
 }
