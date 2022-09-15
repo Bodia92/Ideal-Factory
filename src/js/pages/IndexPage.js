@@ -5,6 +5,7 @@ import imageSection from '../components/imageSection';
 import imageLeft from '../components/imageLeft';
 import someSlider from '../components/sliderSection';
 import scrollbarSection from '../components/scrollbarSection';
+import sliderFullscreen from '../components/sliderFullscreen';
 
 export default class IndexPage {
 	constructor() {
@@ -18,6 +19,7 @@ export default class IndexPage {
 		imageLeft();
 		someSlider();
 		scrollbarSection();
+		sliderFullscreen();
 	}
 
 	init() {
