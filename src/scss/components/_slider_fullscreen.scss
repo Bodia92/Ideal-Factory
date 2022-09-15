@@ -1,1 +1,74 @@
 @import "ScssHelpers/helpers_all";
+
+.slider_fullscreen {
+	overflow-x: scroll;
+	height: 100%;
+	// scroll-snap-type: y mandatory;
+
+	&::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+	}
+}
+
+.slider_fullscreen .slider_fullscreen__list {
+	@extend %global_flex_block_row_nowrap_flex-start_center;
+	// cursor: col-resize;
+}
+
+.slider_fullscreen__item {
+	position: relative;
+	flex-shrink: 0;
+	width: 30%;
+	height: var(--full-screen);
+	// scroll-snap-align: start;
+}
+
+.slider_fullscreen__link {
+	display: block;
+}
+
+.slider_fullscreen__title {
+	font-size: 4rem;
+	line-height: 1.2;
+	color: $white;
+}
+
+.slider_fullscreen__text {
+	@extend %text_style;
+}
+
+.slider_fullscreen__image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.slider_fullscreenn__image_in {
+	@extend %image_size;
+}
+
+.slider_fullscreen__image_img {
+	@extend %cover_img;
+}
+
+.cursors {
+	width: 72px;
+	padding: 10px 20px;
+	background: #ffffff;
+	border-radius: 100px;
+}
+
+.slider_fullscreen__cursor {
+	position: fixed;
+	top: 0;
+	left: 0;
+	@extend %global_flex_block_row_nowrap_center;
+	padding: 10px 20px;
+	background: #ffffff;
+	border-radius: 100px;
+	font-size: 1.4rem;
+	z-index: 10000;
+}

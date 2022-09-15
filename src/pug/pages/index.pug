@@ -5,9 +5,10 @@ block vars
 block content_block
 	include ../blocks/main_section.pug
 	include ../blocks/image_section.pug
+	include ../blocks/slider_fullscreen.pug
 	+image_left(arrayImageBtn)
+	include ../blocks/scrollbar_section.pug
 	+image_left(arrayImageRight)
 	include ../blocks/slider_section.pug
-	include ../blocks/scrollbar_section.pug
 	+image_left(arrayImage)
 	button.main__btn.btn_base(type="button") Scroll
