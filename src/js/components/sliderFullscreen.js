@@ -12,12 +12,13 @@ const sliderFullscreen = () => {
 		let sliderEl = new Swiper(sliderClass, {
 			modules: [Scrollbar],
 			scrollbar: {
-				el: '.swiper-scrollbar',
+				el: '.slider_fullscreen__scrollbar',
 				draggable: true,
 				dragSize: 'auto',
+				dragClass: 'slider_fullscreen__drag',
 			},
 			slidesPerView: 'auto',
-			speed: 800,
+			speed: 1200,
 			// loop: true,
 		});
 	}

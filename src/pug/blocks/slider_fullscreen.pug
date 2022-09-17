@@ -3,7 +3,7 @@ section.section.slider_fullscreen
 		.slider_fullscreen__swiper.swiper
 			ul.slider_fullscreen__list.swiper-wrapper
 				li.slider_fullscreen__item.swiper-slide
-					a.slider_fullscreen__link(href="#")
+					.slider_fullscreen__link
 						h3.slider_fullscreen__title Have A Go Hero’s
 						p.slider_fullscreen__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus lacinia maecenas sed. Arcu commodo urna, phasellus neque.
 						.slider_fullscreen__image
@@ -14,7 +14,7 @@ section.section.slider_fullscreen
 								alt: 'image item',
 							})
 				li.slider_fullscreen__item.swiper-slide
-					a.slider_fullscreen__link(href="#")
+					.slider_fullscreen__link
 						h3.slider_fullscreen__title Artists
 						p.slider_fullscreen__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus lacinia maecenas sed. Arcu commodo urna, phasellus neque.
 						.slider_fullscreen__image
@@ -25,7 +25,7 @@ section.section.slider_fullscreen
 								alt: 'image item',
 							})
 				li.slider_fullscreen__item.swiper-slide
-					a.slider_fullscreen__link(href="#")
+					.slider_fullscreen__link
 						h3.slider_fullscreen__title Brands
 						p.slider_fullscreen__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus lacinia maecenas sed. Arcu commodo urna, phasellus neque.
 						.slider_fullscreen__image
@@ -36,7 +36,7 @@ section.section.slider_fullscreen
 								alt: 'image item',
 							})
 				li.slider_fullscreen__item.swiper-slide
-					a.slider_fullscreen__link(href="#")
+					.slider_fullscreen__link
 						h3.slider_fullscreen__title Makers
 						p.slider_fullscreen__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus lacinia maecenas sed. Arcu commodo urna, phasellus neque.
 						.slider_fullscreen__image
@@ -47,7 +47,7 @@ section.section.slider_fullscreen
 								alt: 'image item',
 							})
 				li.slider_fullscreen__item.swiper-slide
-					a.slider_fullscreen__link(href="#")
+					.slider_fullscreen__link
 						h3.slider_fullscreen__title Makers
 						p.slider_fullscreen__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus lacinia maecenas sed. Arcu commodo urna, phasellus neque.
 						.slider_fullscreen__image
@@ -58,7 +58,7 @@ section.section.slider_fullscreen
 								alt: 'image item',
 							})
 				li.slider_fullscreen__item.swiper-slide
-					a.slider_fullscreen__link(href="#")
+					.slider_fullscreen__link
 						h3.slider_fullscreen__title Makers
 						p.slider_fullscreen__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus lacinia maecenas sed. Arcu commodo urna, phasellus neque.
 						.slider_fullscreen__image
@@ -68,4 +68,12 @@ section.section.slider_fullscreen
 								img_class: 'slider_fullscreen__image_img',
 								alt: 'image item',
 							})
-			//- .slider_fullscreen__cursor Drag
+			.slider_fullscreen__scrollbar
+				.slider_fullscreen__drag
+					.slider_fullscreen__drag_arrows
+						+icon( 'slider_arrow_prev' , 'icon--size_mod')
+						+icon( 'slider_arrow_prev' , 'icon--size_mod')
+					.slider_fullscreen__drag_title Drag
+					.slider_fullscreen__drag_arrows
+						+icon( 'slider_arrow_next' , 'icon--size_mod')
+						+icon( 'slider_arrow_next' , 'icon--size_mod')
