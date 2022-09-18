@@ -6,13 +6,26 @@
 
 .image_section__body {
 	@include flex_block(row, nowrap, flex-start);
+	@include bp($point_2) {
+		flex-direction: column;
+		height: 100%;
+	}
 }
 
 .image_section__content {
 	@include flex_block(column, nowrap, flex-start);
-	width: 33.333%;
-	height: 100vh;
-	padding: 5rem;
+
+	@include bp($point_2, min) {
+		height: 100vh;
+		width: 33.333%;
+		padding: 5rem;
+	}
+	@include bp($point_2 - 1) {
+		height: 33.33vh;
+		width: 100%;
+		padding: 2rem;
+		text-align: center;
+	}
 }
 
 .image_section__logo {
@@ -31,30 +44,48 @@
 .image_section_title {
 	margin: auto 0;
 	color: $white;
-	font-size: 5rem;
-	@extend %title_style;
+	@extend %title_style_2_mod;
 }
 
 .image_section__image {
-	@extend %image_full_screen;
+	@include bp($point_2, min) {
+		flex-shrink: 0;
+		width: 33.333%;
+		height: var(--full-screen);
+	}
+	@include bp($point_2 - 1) {
+		flex-shrink: 0;
+		height: 33.333vh;
+		width: 100%;
+	}
 }
 
 .image_section__image_in {
 	@extend %image_size;
 }
+
 .image_section__image_img {
 	@extend %cover_img;
 }
+
 .image_section__text {
-	width: 33.333%;
-	margin-top: auto;
-	padding: 6rem;
 	color: $white;
 	@extend %text_style;
 
 	p {
+		@extend %text_clamp;
 		&:not(:last-child) {
 			margin-bottom: 3rem;
 		}
+	}
+
+	@include bp($point_2, min) {
+		width: 33.333%;
+		margin-top: auto;
+		padding: 6rem;
+	}
+	@include bp($point_2 - 1) {
+		padding: 2rem;
+		margin: auto 0;
 	}
 }

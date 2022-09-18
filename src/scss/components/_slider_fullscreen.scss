@@ -4,7 +4,13 @@
 	height: 100%;
 }
 .slider_fullscreen__list {
-	@extend %global_flex_block_row_nowrap_flex-start_center;
+	@include bp($point_2, min) {
+		@include flex_block(row, nowrap, flex-start, center);
+	}
+	@include bp($point_3, $point_4) {
+	}
+	@include bp($point_4 - 1) {
+	}
 }
 
 .slider_fullscreen__item {
@@ -55,12 +61,21 @@
 .slider_fullscreen__title {
 	position: relative;
 
-	font-size: 4rem;
 	line-height: 1.2;
 	color: $white;
 	z-index: 10;
 	&:not(:last-child) {
 		margin-bottom: 4rem;
+	}
+
+	@include bp($point_2, min) {
+		font-size: 4rem;
+	}
+	@include bp($point_3, $point_4) {
+		font-size: 3rem;
+	}
+	@include bp($point_4 - 1) {
+		font-size: 2rem;
 	}
 }
 

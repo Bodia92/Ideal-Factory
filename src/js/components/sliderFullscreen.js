@@ -20,6 +20,21 @@ const sliderFullscreen = () => {
 			slidesPerView: 'auto',
 			speed: 1200,
 			// loop: true,
+
+			breakpoints: {
+				320: {
+					slidesPerView: 1.3,
+				},
+				640: {
+					slidesPerView: 2.1,
+				},
+				992: {
+					slidesPerView: 2.5,
+				},
+				1023: {
+					slidesPerView: 'auto',
+				},
+			},
 		});
 	}
 };

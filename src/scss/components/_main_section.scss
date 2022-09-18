@@ -4,14 +4,24 @@
 }
 
 .main_section__body {
-	@include flex_block(row, nowrap, flex-start);
+	@include bp($point_5, min) {
+		@include flex_block(row, nowrap, flex-start);
+	}
 }
 
 .main_section__content {
 	@include flex_block(column, nowrap, flex-start);
-	height: 100vh;
-	padding: 5rem;
+
 	margin-right: auto;
+
+	@include bp($point_5, min) {
+		height: 100vh;
+		padding: 5rem;
+	}
+	@include bp($point_5 - 1) {
+		height: 40vh;
+		padding: 2rem;
+	}
 }
 
 .main_section__logo {
@@ -19,6 +29,9 @@
 	flex-shrink: 0;
 	width: 3.6rem;
 	height: 4rem;
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
 }
 
 .main_section__logo_img {
@@ -31,7 +44,7 @@
 .main_section_title {
 	max-width: 80rem;
 	margin: auto 0;
-	@extend %title_style;
+	@extend %title_style_1_mod;
 }
 
 .main_section__image {

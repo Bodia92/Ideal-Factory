@@ -22,6 +22,7 @@
 	height: var(--full-screen);
 	margin: 0 auto;
 	padding: 5rem;
+
 	@include flex_block(column, nowrap, flex-start);
 
 	&.image_left__content--style_1_mod {
@@ -49,7 +50,7 @@
 	position: relative;
 	max-width: 46rem;
 	margin: auto 0;
-	@extend %title_style;
+	@extend %title_style_1_mod;
 }
 
 .image_left__title_decor {

@@ -14,8 +14,7 @@
 	margin: auto 0;
 	padding: 5rem;
 	color: $white;
-	font-size: 5rem;
-	@extend %title_style;
+	@extend %title_style_2_mod;
 }
 
 .slider_section__image {
