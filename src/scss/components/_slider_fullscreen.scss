@@ -7,10 +7,6 @@
 	@include bp($point_2, min) {
 		@include flex_block(row, nowrap, flex-start, center);
 	}
-	@include bp($point_3, $point_4) {
-	}
-	@include bp($point_4 - 1) {
-	}
 }
 
 .slider_fullscreen__item {

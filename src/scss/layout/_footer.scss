@@ -75,10 +75,10 @@
 	@include bp($point_1, min) {
 		width: 33.333%;
 	}
-	@include bp($point_1 - 1) {
+	@include bp($point_1, $point_3) {
 		width: 50%;
 	}
-	@include bp($point_3) {
+	@include bp($point_3 - 1) {
 		width: 100%;
 	}
 }

@@ -99,8 +99,10 @@
 	}
 	@include bp($point_2 - 1) {
 		left: 50%;
-		bottom: 2rem;
-		transform: translateX(-50%);
+		top: 50%;
+		width: 100%;
+		padding: 0 1rem;
+		transform: translate(-50%, -50%);
 	}
 }
 
@@ -118,6 +120,11 @@
 
 	&:not(:last-child) {
 		margin-right: 4rem;
+	}
+	@include bp($point_2 - 1) {
+		&:not(:last-child) {
+			margin-right: auto;
+		}
 	}
 }
 

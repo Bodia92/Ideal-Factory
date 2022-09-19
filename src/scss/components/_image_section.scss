@@ -23,6 +23,7 @@
 		width: 33.333%;
 		padding: 5rem;
 	}
+
 	@include bp($point_2 - 1) {
 		height: 33.33vh;
 		width: 100%;
@@ -53,8 +54,8 @@
 .image_section__image {
 	flex-shrink: 0;
 	@include bp($point_2, min) {
-		width: 33.333%;
 		height: var(--full-screen);
+		width: 33.333%;
 	}
 	@include bp($point_2 - 1) {
 		height: 33.333vh;
@@ -75,7 +76,11 @@
 	@extend %text_style;
 
 	p {
-		@extend %text_clamp;
+		display: -webkit-box;
+		-webkit-line-clamp: 4;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+
 		&:not(:last-child) {
 			margin-bottom: 3rem;
 		}
@@ -86,8 +91,11 @@
 		margin-top: auto;
 		padding: 6rem;
 	}
+
 	@include bp($point_2 - 1) {
-		padding: 2rem;
 		margin: auto 0;
+		padding: 2rem;
+		height: 33.333vh;
+		overflow-y: auto;
 	}
 }

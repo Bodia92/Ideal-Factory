@@ -2,15 +2,19 @@
 
 .image_left_in {
 	@include bp($point_2, min) {
+		height: 100%;
 		@include flex_block(row, nowrap, flex-start);
 	}
 
-	&.image_left_in--1_mod {
+	&.image_left_in--style_1_mod {
 		@include bp($point_2 - 1) {
-			@include flex_block(column-reverse, nowrap, flex-start, center);
+			display: flex;
+			flex-direction: column-reverse;
+			align-items: center;
 		}
 	}
-	&.image_left_in--2_mod {
+
+	&.image_left_in--style_2_mod {
 		@include bp($point_2 - 1) {
 			@include flex_block(column, nowrap, flex-start, center);
 		}
@@ -19,19 +23,15 @@
 
 .image_left__body_img {
 	flex-shrink: 0;
+
 	@include bp($point_2, min) {
-		width: 33.333%;
 		height: var(--full-screen);
+		width: 33.333%;
 	}
+
 	@include bp($point_2 - 1) {
 		height: 50vh;
 		width: 100%;
-	}
-}
-
-.image_left__body_img--mod {
-	.image_left_in & {
-		@include flex_block(column, nowrap, flex-start, center);
 	}
 }
 
@@ -52,6 +52,7 @@
 
 	&.image_left__content--style_1_mod {
 		@include bp($point_2, min) {
+			max-width: 94rem;
 			padding: 5rem 10rem;
 			max-width: 100%;
 		}
@@ -66,7 +67,6 @@
 	}
 
 	@include bp($point_2, min) {
-		max-width: 94rem;
 		height: var(--full-screen);
 		padding: 5rem;
 	}
