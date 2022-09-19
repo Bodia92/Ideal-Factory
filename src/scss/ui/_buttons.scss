@@ -5,8 +5,15 @@
 
 .main__btn {
 	position: fixed;
-	left: 5rem;
-	bottom: 5rem;
+
 	width: auto;
 	z-index: 101;
+	@include bp($point_2, min) {
+		left: 5rem;
+		bottom: 5rem;
+	}
+	@include bp($point_2 - 1) {
+		left: 2rem;
+		bottom: 7rem;
+	}
 }

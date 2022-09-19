@@ -7,18 +7,6 @@
 .scrollbar_section {
 	position: relative;
 	min-width: 0;
-	padding: 0 0 5rem 12rem;
-
-	&::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 12rem;
-		height: 100%;
-		background-color: $white;
-		z-index: 100;
-	}
 
 	& .swiper-scrollbar {
 		left: 50% !important;
@@ -32,9 +20,25 @@
 		width: 35rem;
 		background-color: #657de9;
 	}
-}
-
-.scrollbar_section_wrapper {
+	@include bp($point_2, min) {
+		padding: 0 0 5rem 12rem;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 12rem;
+			height: 100%;
+			background-color: $white;
+			z-index: 100;
+		}
+	}
+	@include bp($point_2 - 1) {
+		padding: 0 0 4rem 8rem;
+	}
+	@include bp($point_4) {
+		padding: 0 0 4rem 2rem;
+	}
 }
 
 .scrollbar_section_slide {

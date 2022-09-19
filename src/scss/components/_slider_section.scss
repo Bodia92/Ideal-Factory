@@ -6,19 +6,43 @@
 }
 
 .slider_section__body {
-	@include flex_block(row, nowrap, flex-start);
+	@include bp($point_2, min) {
+		@include flex_block(row, nowrap, flex-start);
+	}
+
+	@include bp($point_2 - 1) {
+		flex-direction: column;
+		height: 100%;
+		text-align: center;
+	}
 }
 
 .slider_section_title {
-	width: 33.333%;
 	margin: auto 0;
-	padding: 5rem;
 	color: $white;
 	@extend %title_style_2_mod;
+	@include bp($point_2, min) {
+		width: 33.333%;
+		padding: 5rem;
+	}
+
+	@include bp($point_2 - 1) {
+		height: 20vh;
+		width: 100%;
+		@include flex_block(row, nowrap, center, center);
+	}
 }
 
 .slider_section__image {
-	@extend %image_full_screen;
+	flex-shrink: 0;
+	@include bp($point_2, min) {
+		width: 33.333%;
+		height: var(--full-screen);
+	}
+	@include bp($point_2 - 1) {
+		height: 40vh;
+		width: 100%;
+	}
 }
 
 .slider_section__image_in {
@@ -30,9 +54,15 @@
 }
 
 .slider_section__content {
-	width: 33.333%;
-	margin-top: auto;
-	padding: 5rem 5rem 10%;
+	@include bp($point_2, min) {
+		width: 33.333%;
+		margin-top: auto;
+		padding: 5rem 5rem 10%;
+	}
+	@include bp($point_2 - 1) {
+		padding: 2rem;
+		margin: auto 0;
+	}
 }
 
 .slider_section__content_title {
@@ -43,13 +73,35 @@
 .slider_section__content_text {
 	color: $white;
 	@extend %text_style;
+
+	@include bp($point_2, min) {
+		display: -webkit-box;
+		-webkit-line-clamp: 12;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+	@include bp($point_2 - 1) {
+		display: -webkit-box;
+		-webkit-line-clamp: 4;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
 }
 
 .slider_section_arrows {
 	position: absolute;
-	right: 22%;
-	bottom: 5rem;
+	z-index: 100;
 	@extend %global_flex_block_row_nowrap_flex-start_center;
+
+	@include bp($point_2, min) {
+		right: 22%;
+		bottom: 5rem;
+	}
+	@include bp($point_2 - 1) {
+		left: 50%;
+		bottom: 2rem;
+		transform: translateX(-50%);
+	}
 }
 
 .slider_section_arrow {
@@ -60,7 +112,10 @@
 	color: $white;
 	background-color: #647de8;
 	border-radius: 50%;
+
+	transition: opacity 0.3s ease;
 	cursor: pointer;
+
 	&:not(:last-child) {
 		margin-right: 4rem;
 	}

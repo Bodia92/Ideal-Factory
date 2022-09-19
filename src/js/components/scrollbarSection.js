@@ -23,6 +23,21 @@ const scrollbarSection = () => {
 			slidesPerGroup: 1,
 			speed: 800,
 			// loop: true,
+
+			breakpoints: {
+				320: {
+					slidesPerView: 1.3,
+				},
+				640: {
+					slidesPerView: 2.1,
+				},
+				992: {
+					slidesPerView: 2.5,
+				},
+				1023: {
+					slidesPerView: 'auto',
+				},
+			},
 		});
 	}
 };

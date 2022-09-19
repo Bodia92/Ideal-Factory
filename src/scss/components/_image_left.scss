@@ -1,11 +1,38 @@
 @import "ScssHelpers/helpers_all";
 
 .image_left_in {
-	@include flex_block(row, nowrap, flex-start);
+	@include bp($point_2, min) {
+		@include flex_block(row, nowrap, flex-start);
+	}
+
+	&.image_left_in--1_mod {
+		@include bp($point_2 - 1) {
+			@include flex_block(column-reverse, nowrap, flex-start, center);
+		}
+	}
+	&.image_left_in--2_mod {
+		@include bp($point_2 - 1) {
+			@include flex_block(column, nowrap, flex-start, center);
+		}
+	}
 }
 
 .image_left__body_img {
-	@extend %image_full_screen;
+	flex-shrink: 0;
+	@include bp($point_2, min) {
+		width: 33.333%;
+		height: var(--full-screen);
+	}
+	@include bp($point_2 - 1) {
+		height: 50vh;
+		width: 100%;
+	}
+}
+
+.image_left__body_img--mod {
+	.image_left_in & {
+		@include flex_block(column, nowrap, flex-start, center);
+	}
 }
 
 .image_left__img_in {
@@ -18,56 +45,90 @@
 
 .image_left__content {
 	width: 100%;
-	max-width: 94rem;
-	height: var(--full-screen);
+
 	margin: 0 auto;
-	padding: 5rem;
 
 	@include flex_block(column, nowrap, flex-start);
 
 	&.image_left__content--style_1_mod {
-		padding: 5rem 10rem;
-		max-width: 100%;
+		@include bp($point_2, min) {
+			padding: 5rem 10rem;
+			max-width: 100%;
+		}
 	}
 
 	&.image_left__content--style_2_mod {
-		max-width: 56rem;
-		margin: 0;
-		margin-right: auto;
+		@include bp($point_2, min) {
+			max-width: 56rem;
+			margin: 0;
+			margin-right: auto;
+		}
+	}
+
+	@include bp($point_2, min) {
+		max-width: 94rem;
+		height: var(--full-screen);
+		padding: 5rem;
+	}
+	@include bp($point_2 - 1) {
+		height: 50vh;
+		width: 100%;
+		padding: 3rem 2rem;
+		text-align: center;
 	}
 }
 
-.image_left__button {
-	margin-left: auto;
+.image_left__link {
+	@include bp($point_2, min) {
+		margin-left: auto;
+	}
+	@include bp($point_2 - 1) {
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+	}
 }
 
-.image_left__button_btn {
+.image_left__link_btn {
 	@extend %blue_btn_1;
 	@extend %btn_size_1;
 }
 
 .image_left__title {
 	position: relative;
-	max-width: 46rem;
-	margin: auto 0;
+	width: 100%;
+
 	@extend %title_style_1_mod;
+
+	@include bp($point_2, min) {
+		max-width: 46rem;
+		margin: auto 0;
+	}
+	@include bp($point_2 - 1) {
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+	}
 }
 
 .image_left__title_decor {
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	margin: 0 -2rem 3rem 0;
+
 	font-weight: 700;
 	font-size: 1.4rem;
 	line-height: 2.4;
+
+	@include bp($point_2, min) {
+		margin: 0 -2rem 3rem 0;
+	}
+	@include bp($point_2 - 1) {
+		margin-bottom: 2rem;
+	}
 }
 
 .image_left__text {
-	max-width: 44rem;
-	margin-left: auto;
-	margin-top: auto;
-
 	@extend %text_style;
 
 	display: -webkit-box;
@@ -84,5 +145,14 @@
 		&:not(:last-child) {
 			margin-bottom: 3rem;
 		}
+	}
+
+	@include bp($point_2, min) {
+		max-width: 44rem;
+		margin-left: auto;
+		margin-top: auto;
+	}
+	@include bp($point_2 - 1) {
+		margin: auto 0;
 	}
 }

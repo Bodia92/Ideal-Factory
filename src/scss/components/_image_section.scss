@@ -5,8 +5,11 @@
 }
 
 .image_section__body {
-	@include flex_block(row, nowrap, flex-start);
-	@include bp($point_2) {
+	@include bp($point_2, min) {
+		@include flex_block(row, nowrap, flex-start);
+	}
+
+	@include bp($point_2 - 1) {
 		flex-direction: column;
 		height: 100%;
 	}
@@ -48,13 +51,12 @@
 }
 
 .image_section__image {
+	flex-shrink: 0;
 	@include bp($point_2, min) {
-		flex-shrink: 0;
 		width: 33.333%;
 		height: var(--full-screen);
 	}
 	@include bp($point_2 - 1) {
-		flex-shrink: 0;
 		height: 33.333vh;
 		width: 100%;
 	}
