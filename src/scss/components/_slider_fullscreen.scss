@@ -118,13 +118,20 @@
 
 .slider_fullscreen__scrollbar {
 	position: absolute;
-	bottom: 26%;
-	right: 26%;
+
 	width: 20rem;
+	right: 26%;
 
 	@extend %global_flex_block_row_nowrap_flex-start_center;
 
 	z-index: 100;
+
+	@include bp($point_2, min) {
+		bottom: 26%;
+	}
+	@include bp($point_2 - 1) {
+		bottom: 5%;
+	}
 }
 
 .slider_fullscreen__drag {

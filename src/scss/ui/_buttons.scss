@@ -16,4 +16,7 @@
 		left: 2rem;
 		bottom: 7rem;
 	}
+	@include bp($point_3) {
+		display: none;
+	}
 }

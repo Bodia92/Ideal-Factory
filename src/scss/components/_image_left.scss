@@ -2,22 +2,11 @@
 
 .image_left_in {
 	@include bp($point_2, min) {
-		height: 100%;
+		height: 100vh;
 		@include flex_block(row, nowrap, flex-start);
 	}
-
-	&.image_left_in--style_1_mod {
-		@include bp($point_2 - 1) {
-			display: flex;
-			flex-direction: column-reverse;
-			align-items: center;
-		}
-	}
-
-	&.image_left_in--style_2_mod {
-		@include bp($point_2 - 1) {
-			@include flex_block(column, nowrap, flex-start, center);
-		}
+	@include bp($point_2 - 1) {
+		@include flex_block(column, nowrap, flex-start, center);
 	}
 }
 
@@ -142,6 +131,10 @@
 	}
 
 	p {
+		display: -webkit-box;
+		-webkit-line-clamp: 6;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
 		&:not(:last-child) {
 			margin-bottom: 3rem;
 		}

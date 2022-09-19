@@ -39,15 +39,17 @@
 
 %image_full_screen {
 	flex-shrink: 0;
-	height: var(--full-screen);
+
 	@include bp($point_2, min) {
 		width: 33.333%;
 	}
 	@include bp($point_2, $point_5) {
 		width: 45%;
+		height: var(--full-screen);
 	}
 	@include bp($point_5 - 1) {
 		width: 100%;
+		height: 60vh;
 	}
 }
 

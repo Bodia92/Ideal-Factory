@@ -2,31 +2,30 @@ mixin image_left (array)
 	section.section.image_left
 		.section_in
 			each item in array
-				if item.image_body
-					.image_left_in(class=item.image_body)
-						if item.image_left
-							.image_left__body_img
-								+picture({
-									img: item.image_left,
-									class: 'image_left__img_in',
-									img_class: 'image_left__img',
-									alt: 'image item',
-								})
-						.image_left__content(class=item.style_mod)
-							if item.buttom
-								.image_left__link
-									a.image_left__link_btn(href="#")= item.buttom
-							if item.title
-								h3.image_left__title= item.title
-									if item.text_decor
-										span.image_left__title_decor= item.text_decor
-							if item.text
-								h3.image_left__text(class=item.style_text_mod)!= item.text
-						if item.image_right
-							.image_left__body_img
-								+picture({
-									img: item.image_right,
-									class: 'image_left__img_in',
-									img_class: 'image_left__img',
-									alt: 'image item',
-								})
+				.image_left_in
+					if item.image_left
+						.image_left__body_img
+							+picture({
+								img: item.image_left,
+								class: 'image_left__img_in',
+								img_class: 'image_left__img',
+								alt: 'image item',
+							})
+					.image_left__content(class=item.style_mod)
+						if item.buttom
+							.image_left__link
+								a.image_left__link_btn(href="#")= item.buttom
+						if item.title
+							h3.image_left__title= item.title
+								if item.text_decor
+									span.image_left__title_decor= item.text_decor
+						if item.text
+							h3.image_left__text(class=item.style_text_mod)!= item.text
+					if item.image_right
+						.image_left__body_img
+							+picture({
+								img: item.image_right,
+								class: 'image_left__img_in',
+								img_class: 'image_left__img',
+								alt: 'image item',
+							})

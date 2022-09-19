@@ -23,8 +23,6 @@
 	@include bp($point_4, min) {
 		@include flex_block(row, nowrap, flex-start, center);
 	}
-	@include bp($point_3 - 1) {
-	}
 }
 
 .footer__content {
@@ -32,13 +30,13 @@
 
 	height: 100%;
 
-	@include bp($point_3, min) {
+	@include bp($point_4, min) {
 		max-width: 40rem;
 		&:not(:last-child) {
 			margin-right: 2rem;
 		}
 	}
-	@include bp($point_3 - 1) {
+	@include bp($point_4 - 1) {
 		&:not(:last-child) {
 			margin-bottom: 2rem;
 		}
