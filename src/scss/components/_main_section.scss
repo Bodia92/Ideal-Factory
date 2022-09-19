@@ -1,8 +1,5 @@
 @import "ScssHelpers/helpers_all";
 
-.main_section {
-}
-
 .main_section__body {
 	@include bp($point_5, min) {
 		@include flex_block(row, nowrap, flex-start);

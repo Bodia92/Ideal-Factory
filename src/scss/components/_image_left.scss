@@ -90,7 +90,7 @@
 	@extend %title_style_1_mod;
 
 	@include bp($point_2, min) {
-		max-width: 46rem;
+		max-width: 48rem;
 		margin: auto 0;
 	}
 	@include bp($point_2 - 1) {
@@ -101,20 +101,10 @@
 }
 
 .image_left__title_decor {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-
+	padding-left: 1rem;
 	font-weight: 700;
 	font-size: 1.4rem;
 	line-height: 2.4;
-
-	@include bp($point_2, min) {
-		margin: 0 -2rem 3rem 0;
-	}
-	@include bp($point_2 - 1) {
-		margin-bottom: 2rem;
-	}
 }
 
 .image_left__text {
