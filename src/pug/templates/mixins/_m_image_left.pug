@@ -20,7 +20,7 @@ mixin image_left (array)
 								if item.text_decor
 									sup.image_left__title_decor= item.text_decor
 						if item.text
-							h3.image_left__text(class=item.style_text_mod)!= item.text
+							p.image_left__text(class=item.style_text_mod)!= item.text
 					if item.image_right
 						.image_left__body_img
 							+picture({
