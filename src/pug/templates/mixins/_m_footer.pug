@@ -2,9 +2,9 @@ mixin footer
 	footer.footer
 		.footer__body
 			.footer__content
-				h3.footer__title We’ll be launching very soon!
-				p.footer__text So sign up to get notified as soon as we launch so you can start making your own custom products and selling them to the masses.
-			form.footer__form
+				h3.footer__title(class= "titleAnim") We’ll be launching very soon!
+				p.footer__text(class= "textAnim") So sign up to get notified as soon as we launch so you can start making your own custom products and selling them to the masses.
+			form.footer__form(class= "imageAnim")
 					+form_input({
 						block_class: 'footer_form__input',
 						field_class: 'footer_form__field',

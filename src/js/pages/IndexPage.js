@@ -7,6 +7,7 @@ import someSlider from '../components/sliderSection';
 import scrollbarSection from '../components/scrollbarSection';
 import sliderFullscreen from '../components/sliderFullscreen';
 import scrollToSection from '../components/scrollToSection';
+import gsapAnimation from '../components/gsapAnimation';
 
 export default class IndexPage {
 	constructor() {
@@ -22,6 +23,7 @@ export default class IndexPage {
 		scrollbarSection();
 		sliderFullscreen();
 		scrollToSection();
+		gsapAnimation();
 	}
 
 	init() {
