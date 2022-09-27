@@ -1,0 +1,148 @@
+@import "ScssHelpers/helpers_all";
+
+.image_section {
+	background-color: $section_bg;
+}
+
+.image_section__body {
+	@include bp($point_4, min) {
+		@include flex_block(row, nowrap, flex-start);
+	}
+
+	@include bp($point_2 - 1) {
+		// flex-direction: column;
+		// height: 100%;
+	}
+}
+
+.image_section__content {
+	@include flex_block(column, nowrap, flex-start);
+	margin-right: auto;
+
+	@include bp($point_1, min) {
+		min-height: var(--full-screen);
+		padding: 5rem 5rem 17rem;
+	}
+
+	@include bp($point_1, $point_4) {
+		min-height: var(--full-screen);
+		padding: 5rem 5rem 8rem;
+	}
+
+	@include bp($point_4 - 1) {
+		padding: 8rem 3rem 6.2rem;
+	}
+}
+
+.image_section__logo {
+	@extend %logo_dimension;
+
+	@include bp($point_4, min) {
+		&:not(:last-child) {
+			margin-bottom: 10.6rem;
+		}
+	}
+
+	@include bp($point_4 - 1) {
+		&:not(:last-child) {
+			margin-bottom: 10.3rem;
+		}
+	}
+}
+
+.image_section__logo_img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	@extend %contain_img;
+}
+
+.image_section_title {
+	@extend %title_style_2_mod;
+	margin: auto 0;
+
+	color: $white;
+
+	@include bp($point_4, min) {
+		max-width: 44rem;
+	}
+	@include bp($point_4 - 1) {
+		&:not(:last-child) {
+			margin-bottom: 6rem;
+		}
+	}
+}
+
+.image_section__image {
+	flex-shrink: 0;
+
+	position: relative;
+	@include bp($point_3, min) {
+		width: 33.333%;
+		min-height: var(--full-screen);
+	}
+	@include bp($point_3, $point_4) {
+		width: 42%;
+		min-height: var(--full-screen);
+	}
+
+	@include bp($point_4 - 1) {
+		min-height: 24rem;
+		width: 100%;
+	}
+}
+
+.image_section__image_in {
+	@extend %position_absolute;
+}
+
+.image_section__image_img {
+	@extend %cover_img;
+	@include bp($point_1 - 1) {
+		object-position: left;
+	}
+}
+
+.image_section__text_tablet {
+	@extend %text_style;
+	color: $white;
+
+	p {
+		&:not(:last-child) {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	@include bp($point_1, min) {
+		display: none;
+	}
+	@include bp($point_1, $point_4) {
+		display: block;
+		max-width: 36rem;
+	}
+
+	@include bp($point_4 - 1) {
+		display: block;
+	}
+}
+
+.image_section__text {
+	@extend %text_style;
+	color: $white;
+
+	@include bp($point_1, min) {
+		flex-shrink: 0;
+		width: 33.333%;
+		margin-top: auto;
+		padding: 6rem 6rem 6.6rem 7.3rem;
+		p {
+			max-width: 43rem;
+			&:not(:last-child) {
+				margin-bottom: 1.5rem;
+			}
+		}
+	}
+	@include bp($point_1 - 1) {
+		display: none;
+	}
+}

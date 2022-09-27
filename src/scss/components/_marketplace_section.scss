@@ -1,6 +1,6 @@
 @import "ScssHelpers/helpers_all";
 
-.main_section__wrapper {
+.marketplace_section__wrapper {
 	@include bp($point_4, min) {
 		@include flex_block(row, nowrap, flex-start);
 	}
@@ -9,52 +9,60 @@
 	}
 }
 
-.main_section__content {
+.marketplace_section__content {
 	@include flex_block(column, nowrap, flex-start);
 
 	margin-right: auto;
 
-	@include bp($point_4, min) {
+	@include bp($point_3, min) {
 		min-height: 100vh;
 		flex: 1 1 auto;
-		padding: 5rem 5rem 5.6rem 5rem;
+		padding: 10rem 5rem 5rem;
+	}
+
+	@include bp($point_3, $point_4) {
+		flex: 1 1 auto;
+		min-height: 90rem;
+		padding: 14rem 5rem 5rem;
 	}
 	@include bp($point_4 - 1) {
 		min-height: 49rem;
-		padding: 7rem 3rem 5rem;
+		padding: 7rem 3rem 6rem;
 	}
 }
 
-.main_section__logo {
-	@extend %logo_dimension;
-}
-
-.main_section__logo_img {
-	@extend %contain_img;
-	display: block;
-	width: 100%;
-	height: 100%;
-}
-
-.main_section__title {
+.marketplace_section__title {
 	@extend %title_style_1_mod;
 
 	margin: auto 0;
 	@include bp($point_3, min) {
-		max-width: 70rem;
+		max-width: 50rem;
 	}
 	@include bp($point_3, $point_4) {
-		max-width: 38rem;
+		max-width: 35rem;
 	}
 	@include bp($point_4 - 1) {
-		max-width: 28rem;
+		max-width: 24rem;
 		&:not(:last-child) {
 			margin-bottom: 6rem;
 		}
 	}
 }
 
-.main_section__image {
+.marketplace_section__text {
+	@extend %text_style;
+	max-width: 46rem;
+	@include bp($point_3, min) {
+		max-width: 46rem;
+	}
+	@include bp($point_3, $point_4) {
+		max-width: 36rem;
+	}
+	@include bp($point_4 - 1) {
+	}
+}
+
+.marketplace_section__image {
 	flex-shrink: 0;
 
 	position: relative;
@@ -64,7 +72,7 @@
 	}
 	@include bp($point_3, $point_4) {
 		width: 42%;
-		min-height: 100vh;
+		min-height: 90rem;
 	}
 
 	@include bp($point_4 - 1) {
@@ -73,9 +81,13 @@
 	}
 }
 
-.main_section__image_in {
+.marketplace_section__image_in {
 	@extend %position_absolute;
 }
-.main_section__image_img {
+
+.marketplace_section__image_img {
 	@extend %cover_img;
+	@include bp($point_1 - 1) {
+		object-position: left;
+	}
 }

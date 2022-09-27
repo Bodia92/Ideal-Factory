@@ -1,10 +1,11 @@
 import { GLOBAL_VARS } from 'utils/constants';
 import { documentReady, pageLoad } from 'utils';
-import imageSection from '../components/imageSection';
+import imageCenterSection from '../components/imageCenterSection';
 import imageLeft from '../components/imageLeft';
 import someSlider from '../components/sliderSection';
 import scrollbarSliderSection from '../components/scrollbarSliderSection';
 import sliderFullscreen from '../components/sliderFullscreen';
+import marketplaceSection from '../components/marketplaceSection';
 import scrollToSection from '../components/scrollToSection';
 import gsapAnimation from '../components/gsapAnimation';
 
@@ -15,11 +16,12 @@ export default class IndexPage {
 
 	loadFunc() {
 		console.log('index page load');
-		imageSection();
+		imageCenterSection();
 		imageLeft();
 		someSlider();
 		scrollbarSliderSection();
 		sliderFullscreen();
+		marketplaceSection();
 		scrollToSection();
 		gsapAnimation();
 	}
