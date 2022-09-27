@@ -1,10 +1,10 @@
-import 'ScssComponents/_scrollbar_section.scss';
+import 'ScssComponents/_scrollbar_slider_section.scss';
 import Swiper, { Scrollbar } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 
-const scrollbarSection = () => {
-	const sliderClass = '.scrollbar_section';
+const scrollbarSliderSection = () => {
+	const sliderClass = '.scrollbar_slider_section__swiper';
 
 	let slideEl = document.querySelectorAll(sliderClass);
 
@@ -20,9 +20,9 @@ const scrollbarSection = () => {
 				dragSize: 'auto',
 			},
 			slidesPerView: 'auto',
-			slidesPerGroup: 1,
+			// slidesPerGroup: 3,
 			speed: 800,
-			// loop: true,
+			loop: true,
 
 			breakpoints: {
 				320: {
@@ -42,4 +42,4 @@ const scrollbarSection = () => {
 	}
 };
 
-export default scrollbarSection;
+export default scrollbarSliderSection;

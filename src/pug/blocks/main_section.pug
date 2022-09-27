@@ -1,16 +1,16 @@
 section.section.main_section
-		.section_in
-			.main_section__body
-				.main_section__content
-					a.main_section__logo(href="#")
-						img(src="images/logo.svg", class="main_section__logo_img" alt="logo")
-					h1.main_section_title(class= "titleAnim") Where imagination & creativity come to life
-				.main_section__image(class= "imageAnim")
-					+picture({
-						img: 'section-image/item1.jpg',
-						class: 'main_section__image_in',
-						img_class: 'main_section__image_img',
-						alt: 'main image',
-					})
+		.main_section__body
+			.main_section__content
+				a.main_section__logo(href="#")
+					img(src="images/logo.svg", class="main_section__logo_img" alt="logo")
+				h1.main_section_title.titleAnim Where imagination & creativity come to life
+				button.main_section.btn_base(type="button") Scroll
+			.main_section__image.imageAnim
+				+picture({
+					img: 'section-image/item1.jpg',
+					class: 'main_section__image_in',
+					img_class: 'main_section__image_img',
+					alt: 'main image',
+				})
 
 

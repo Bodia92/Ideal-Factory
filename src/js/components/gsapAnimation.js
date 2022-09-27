@@ -23,8 +23,8 @@ const gsapAnimation = () => {
 		});
 	});
 	images.forEach((image, i) => {
-		const anim = gsap.fromTo(image, { autoAlpha: 0, opacity: 0.8, y: 50 }, {
-			duration: 2, autoAlpha: 1, opacity: 1, y: 0,
+		const anim = gsap.fromTo(image, { autoAlpha: 0, opacity: 0 }, {
+			duration: 2, autoAlpha: 1, opacity: 1,
 		});
 		ScrollTrigger.create({
 			trigger: image,

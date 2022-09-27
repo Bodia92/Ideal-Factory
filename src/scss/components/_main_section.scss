@@ -1,8 +1,11 @@
 @import "ScssHelpers/helpers_all";
 
 .main_section__body {
-	@include bp($point_5, min) {
+	@include bp($point_4, min) {
 		@include flex_block(row, nowrap, flex-start);
+	}
+	@include bp($point_4 - 1) {
+		flex-direction: column;
 	}
 }
 
@@ -11,45 +14,81 @@
 
 	margin-right: auto;
 
-	@include bp($point_5, min) {
-		height: 100vh;
-		padding: 5rem;
+	@include bp($point_4, min) {
+		min-height: 100vh;
+		flex: 1 1 auto;
+		padding: 5rem 5rem 5.6rem 5rem;
 	}
-	@include bp($point_5 - 1) {
-		height: 100%;
-		padding: 4rem 2rem;
+	@include bp($point_4 - 1) {
+		min-height: 49rem;
+		padding: 7rem 3rem 5rem;
 	}
 }
 
 .main_section__logo {
 	display: inline-flex;
 	flex-shrink: 0;
-	width: 3.6rem;
-	height: 4rem;
-	&:not(:last-child) {
-		margin-bottom: 2rem;
+
+	@include bp($point_4, min) {
+		width: 3.6rem;
+		height: 4rem;
+	}
+	@include bp($point_4 - 1) {
+		width: 2.8rem;
+		height: 3rem;
 	}
 }
 
 .main_section__logo_img {
+	@extend %contain_img;
 	display: block;
 	width: 100%;
 	height: 100%;
-	@extend %contain_img;
 }
 
 .main_section_title {
-	max-width: 80rem;
-	margin: auto 0;
 	@extend %title_style_1_mod;
+
+	margin: auto 0;
+	@include bp($point_3, min) {
+		max-width: 70rem;
+	}
+	@include bp($point_3, $point_4) {
+		max-width: 38rem;
+	}
+	@include bp($point_4 - 1) {
+		max-width: 28rem;
+		&:not(:last-child) {
+			margin-bottom: 6rem;
+		}
+	}
 }
 
 .main_section__image {
-	@extend %image_full_screen;
+	flex-shrink: 0;
+
+	position: relative;
+	@include bp($point_3, min) {
+		width: 33.333%;
+		min-height: 100vh;
+	}
+	@include bp($point_3, $point_4) {
+		width: 42%;
+		min-height: 100vh;
+	}
+
+	@include bp($point_4 - 1) {
+		height: 32rem;
+		width: 100%;
+	}
 }
 
 .main_section__image_in {
-	@extend %image_size;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 .main_section__image_img {
 	@extend %cover_img;

@@ -1,0 +1,74 @@
+@import "ScssHelpers/helpers_all";
+
+.scrollbar_slider_section {
+	& .swiper-scrollbar {
+		left: 46.5% !important;
+		width: 100% !important;
+		max-width: 166rem;
+		transform: translateX(-50%);
+		background-color: #e3e3e3;
+	}
+
+	& .swiper-scrollbar-drag {
+		width: 35rem;
+		background-color: #657de9;
+	}
+	@include bp($point_2, min) {
+		padding-left: 12rem;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 12.6rem;
+			height: 100%;
+			background-color: $white;
+			z-index: 100;
+		}
+	}
+	@include bp($point_2 - 1) {
+		padding-left: 8rem;
+	}
+	@include bp($point_4) {
+		padding-left: 2rem;
+	}
+}
+
+.scrollbar_section_in {
+	@extend %global_flex_block_row_nowrap_flex-start_center;
+}
+
+.scrollbar_slider_section__swiper {
+	position: relative;
+	padding-bottom: 6.5rem;
+}
+
+.scrollbar_slider_section__wrapper {
+}
+
+.scrollbar_slider_section__slide {
+	width: auto;
+	// max-width: 70rem;
+	height: 58.2rem;
+	// overflow: hidden;
+	// &:nth-child(even) {
+	// 	max-width: 40rem;
+	// }
+}
+
+.scrollbar_slider_section__image {
+	@extend %cover_img;
+}
+
+.scrollbar_slider_section__image_in {
+}
+
+.scrollbar_slider_section__image_img {
+	@extend %cover_img;
+}
+
+.scrollbar_slider_section__scrollbar {
+	// max-width: 166rem;
+	// width: 90%;
+	// margin: 0 auto;
+}
