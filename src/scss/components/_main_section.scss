@@ -14,10 +14,14 @@
 
 	margin-right: auto;
 
-	@include bp($point_4, min) {
+	@include bp($point_3, min) {
 		min-height: 100vh;
-		flex: 1 1 auto;
 		padding: 5rem 5rem 5.6rem 5rem;
+	}
+
+	@include bp($point_3, $point_4) {
+		min-height: 100vh;
+		padding: 5rem 5rem 5.4rem;
 	}
 	@include bp($point_4 - 1) {
 		min-height: 49rem;
@@ -27,6 +31,9 @@
 
 .main_section__logo {
 	@extend %logo_dimension;
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
 }
 
 .main_section__logo_img {
@@ -38,19 +45,34 @@
 
 .main_section__title {
 	@extend %title_style_1_mod;
+	margin-top: auto;
 
-	margin: auto 0;
 	@include bp($point_3, min) {
 		max-width: 70rem;
+		&:not(:last-child) {
+			margin-bottom: 5.6rem;
+		}
 	}
 	@include bp($point_3, $point_4) {
 		max-width: 38rem;
+		&:not(:last-child) {
+			margin-bottom: 1.4rem;
+		}
 	}
 	@include bp($point_4 - 1) {
-		max-width: 28rem;
+		max-width: 27rem;
 		&:not(:last-child) {
 			margin-bottom: 6rem;
 		}
+	}
+}
+
+.main_section__btn {
+	@extend %btn_size_2;
+	@extend %blue_btn_1;
+
+	@include bp($point_4, min) {
+		margin-top: auto;
 	}
 }
 

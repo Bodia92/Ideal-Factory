@@ -1,7 +1,6 @@
 import { GLOBAL_VARS } from 'utils/constants';
 import { documentReady, pageLoad } from 'utils';
 import imageCenterSection from '../components/imageCenterSection';
-import imageLeft from '../components/imageLeft';
 import someSlider from '../components/sliderSection';
 import scrollbarSliderSection from '../components/scrollbarSliderSection';
 import sliderFullscreen from '../components/sliderFullscreen';
@@ -19,7 +18,6 @@ export default class IndexPage {
 	loadFunc() {
 		console.log('index page load');
 		imageCenterSection();
-		imageLeft();
 		someSlider();
 		scrollbarSliderSection();
 		sliderFullscreen();
