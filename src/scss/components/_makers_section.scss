@@ -1,0 +1,107 @@
+@import "ScssHelpers/helpers_all";
+
+.makers_section__wrapper {
+	@include flex_block(row, nowrap, flex-start);
+
+	@include bp($point_3, $point_4) {
+		flex-direction: row-reverse;
+	}
+
+	@include bp($point_4 - 1) {
+		flex-direction: column-reverse;
+	}
+}
+
+.makers_section__content {
+	@include flex_block(column, nowrap, flex-start);
+	@include bp($point_3, min) {
+		width: 100%;
+		min-height: var(--full-screen);
+		padding: 11.2rem 12.7rem 5rem 10rem;
+	}
+
+	@include bp($point_3, $point_4) {
+		width: 100%;
+		min-height: 90rem;
+		padding: 14.6rem 7.3rem 5rem 5rem;
+	}
+
+	@include bp($point_4 - 1) {
+		min-height: 49.2rem;
+		padding: 21.2rem 3rem 6.2rem 3.1rem;
+	}
+}
+
+.makers_section__title {
+	@extend %title_style_1_mod;
+
+	@include bp($point_3, min) {
+		margin-top: auto;
+		max-width: 50rem;
+		&:not(:last-child) {
+			margin-bottom: 1.2rem;
+		}
+	}
+	@include bp($point_3, $point_4) {
+		margin-top: auto;
+		max-width: 32rem;
+		&:not(:last-child) {
+			margin-bottom: 1.2rem;
+		}
+	}
+	@include bp($point_4 - 1) {
+		margin-top: auto;
+		max-width: 24rem;
+		&:not(:last-child) {
+			margin-bottom: 6rem;
+		}
+	}
+}
+
+.makers_section__text {
+	@extend %text_style;
+
+	@include bp($point_3, min) {
+		margin-top: auto;
+		margin-left: auto;
+		max-width: 44rem;
+	}
+	@include bp($point_3, $point_4) {
+		margin-top: auto;
+		max-width: 36rem;
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+	}
+
+	@include bp($point_4 - 1) {
+		margin-top: auto;
+	}
+}
+
+.makers_section__image {
+	position: relative;
+	flex-shrink: 0;
+
+	@include bp($point_3, min) {
+		width: 33.333%;
+		min-height: var(--full-screen);
+	}
+	@include bp($point_3, $point_4) {
+		width: 42%;
+		min-height: 90rem;
+	}
+
+	@include bp($point_4 - 1) {
+		min-height: 32rem;
+		width: 100%;
+	}
+}
+
+.makers_section__image_in {
+	@extend %position_absolute;
+}
+
+.makers_section__image_img {
+	@extend %cover_img;
+}

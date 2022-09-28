@@ -1,9 +1,8 @@
 @import "ScssHelpers/helpers_all";
 
-@import "ScssHelpers/helpers_all";
-
 .customiser_section__wrapper {
 	@include flex_block(row, nowrap, flex-start);
+
 	@include bp($point_4 - 1) {
 		flex-direction: column-reverse;
 	}
@@ -54,7 +53,7 @@
 	}
 
 	@include bp($point_3, $point_4) {
-		flex: 1 1 auto;
+		width: 100%;
 		min-height: 89rem;
 		padding: 23.2rem 5rem 4rem;
 	}

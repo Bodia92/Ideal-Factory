@@ -7,6 +7,7 @@ import scrollbarSliderSection from '../components/scrollbarSliderSection';
 import sliderFullscreen from '../components/sliderFullscreen';
 import customiserSection from '../components/customiserSection';
 import marketplaceSection from '../components/marketplaceSection';
+import makersSection from '../components/makersSection';
 import scrollToSection from '../components/scrollToSection';
 import gsapAnimation from '../components/gsapAnimation';
 
@@ -24,6 +25,7 @@ export default class IndexPage {
 		sliderFullscreen();
 		customiserSection();
 		marketplaceSection();
+		makersSection();
 		scrollToSection();
 		gsapAnimation();
 	}
