@@ -1,8 +1,5 @@
 @import "ScssHelpers/helpers_all";
 
-.slider_fullscreen {
-	height: 100%;
-}
 .slider_fullscreen__list {
 	@include bp($point_2, min) {
 		@include flex_block(row, nowrap, flex-start, center);
@@ -12,9 +9,7 @@
 .slider_fullscreen__item {
 	position: relative;
 	flex-shrink: 0;
-	width: 30%;
-	height: var(--full-screen);
-	padding: 5rem;
+	width: 58.8rem;
 
 	&::before {
 		content: "";
@@ -48,43 +43,52 @@
 	}
 }
 
-.slider_fullscreen__link {
-	display: block;
-	height: 100%;
+.slider_fullscreen__content {
 	@include flex_block(column, nowrap, center, flex-start);
+
+	@include bp($point_4, min) {
+		min-height: var(--full-screen);
+		padding: 9rem 5rem 5rem;
+	}
+
+	@include bp($point_4 - 1) {
+		min-height: 60rem;
+		padding: 3rem 3rem 3.2rem;
+	}
 }
 
 .slider_fullscreen__title {
+	@extend %title_style_4_mod;
 	position: relative;
+	z-index: 10;
 	max-width: 40rem;
 
-	line-height: 1.2;
 	color: $white;
-	z-index: 10;
-	&:not(:last-child) {
-		margin-bottom: 4rem;
-	}
 
 	@include bp($point_2, min) {
-		font-size: 4rem;
+		&:not(:last-child) {
+			margin-bottom: 4rem;
+		}
 	}
+
 	@include bp($point_3, $point_4) {
-		font-size: 3rem;
+		&:not(:last-child) {
+			margin-bottom: 5rem;
+		}
 	}
+
 	@include bp($point_4 - 1) {
-		font-size: 2rem;
+		&:not(:last-child) {
+			margin-bottom: 3rem;
+		}
 	}
 }
 
 .slider_fullscreen__text {
 	position: relative;
-	margin-top: -50%;
 
-	@extend %text_style;
+	font-weight: 500;
 	color: $white;
-
-	opacity: 0;
-	visibility: hidden;
 
 	z-index: 10;
 	transition: all 0.3s ease, margin 0.4s ease;
@@ -93,44 +97,57 @@
 	-webkit-line-clamp: 12;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
+
+	@include bp($point_2, min) {
+		max-width: 31rem;
+		font-size: 1.4rem;
+		line-height: 171%;
+		@media (any-hover: hover) {
+			margin-bottom: -12rem;
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+	@include bp($point_3, $point_4) {
+		max-width: 34rem;
+
+		font-size: 1.4rem;
+		line-height: 171%;
+	}
+	@include bp($point_4 - 1) {
+		font-size: 1.1rem;
+		line-height: 182%;
+	}
 }
 
 .slider_fullscreen__image {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+	@extend %position_absolute;
 }
 
-.slider_fullscreenn__image_in {
-}
-
+.slider_fullscreenn__image_in,
 .slider_fullscreen__image_img {
 	@extend %cover_img;
 }
 
 .slider_fullscreen__cursor {
 	font-size: 1.4rem;
-	background: $white;
+	background-color: $white;
 	border-radius: 100px;
 }
 
 .slider_fullscreen__scrollbar {
 	position: absolute;
-
+	z-index: 100;
 	width: 20rem;
-	right: 26%;
+	right: 24%;
 
 	@extend %global_flex_block_row_nowrap_flex-start_center;
-
-	z-index: 100;
 
 	@include bp($point_2, min) {
 		bottom: 26%;
 	}
 	@include bp($point_2 - 1) {
-		bottom: 5%;
+		display: none;
 	}
 }
 
@@ -159,6 +176,7 @@
 	@extend %global_flex_block_row_nowrap_center;
 
 	font-size: 1.4rem;
+	line-height: 171%;
 	background-color: #ffffff;
 	border-radius: 10rem;
 	cursor: pointer;

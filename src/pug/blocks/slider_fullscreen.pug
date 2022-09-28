@@ -1,79 +1,59 @@
+-
+	let	slides = [
+			{
+				title: 'Have A Go Hero’s',
+				text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus lacinia maecenas sed. Arcu commodo urna, 	phasellus neque.',
+				image: {
+					src: 'slider-fullscreen/image1.jpg',
+					alt: 'image item 1',
+				},
+			},
+			{
+				title: 'Artists',
+				text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus lacinia maecenas sed. Arcu commodo urna, phasellus neque.',
+				image: {
+					src: 'slider-fullscreen/image2.jpg',
+					alt: 'image item 2',
+				},
+			},
+			{
+				title: 'Brands',
+				text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus lacinia maecenas sed. Arcu commodo urna, 	phasellus neque.',
+				image: {
+					src: 'slider-fullscreen/image3.jpg',
+					alt: 'image item 3',
+				},
+			},
+			{
+				title: 'Makers',
+				text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus lacinia maecenas sed. Arcu commodo urna, 	phasellus neque.',
+				image: {
+					src: 'slider-fullscreen/image4.jpg',
+					alt: 'image item 4',
+				},
+			}
+		];
 section.section.slider_fullscreen
-	.section_in
-		.slider_fullscreen__swiper.swiper
-			ul.slider_fullscreen__list.swiper-wrapper
+	.slider_fullscreen__swiper.swiper
+		ul.slider_fullscreen__list.swiper-wrapper
+			each slide in slides
 				li.slider_fullscreen__item.swiper-slide
-					.slider_fullscreen__link
-						h3.slider_fullscreen__title(class= "titleAnim") Have A Go Hero’s
-						p.slider_fullscreen__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus lacinia maecenas sed. Arcu commodo urna, phasellus neque.
-						.slider_fullscreen__image(class= "imageAnim")
+					.slider_fullscreen__content
+						h3.slider_fullscreen__title.titleAnim= slide.title
+						p.slider_fullscreen__text= slide.text
+						.slider_fullscreen__image.imageAnim
 							+picture({
-								img: 'slider-fullscreen/image1.jpg',
+								img: slide.image.src,
 								class: 'slider_fullscreenn__image_in',
 								img_class: 'slider_fullscreen__image_img',
-								alt: 'image item',
+								alt: slide.image.alt,
 							})
-				li.slider_fullscreen__item.swiper-slide
-					.slider_fullscreen__link
-						h3.slider_fullscreen__title(class= "titleAnim") Artists
-						p.slider_fullscreen__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus lacinia maecenas sed. Arcu commodo urna, phasellus neque.
-						.slider_fullscreen__image(class= "imageAnim")
-							+picture({
-								img: 'slider-fullscreen/image2.jpg',
-								class: 'slider_fullscreenn__image_in',
-								img_class: 'slider_fullscreen__image_img',
-								alt: 'image item',
-							})
-				li.slider_fullscreen__item.swiper-slide
-					.slider_fullscreen__link
-						h3.slider_fullscreen__title(class= "titleAnim") Brands
-						p.slider_fullscreen__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus lacinia maecenas sed. Arcu commodo urna, phasellus neque.
-						.slider_fullscreen__image(class= "imageAnim")
-							+picture({
-								img: 'slider-fullscreen/image3.jpg',
-								class: 'slider_fullscreenn__image_in',
-								img_class: 'slider_fullscreen__image_img',
-								alt: 'image item',
-							})
-				li.slider_fullscreen__item.swiper-slide
-					.slider_fullscreen__link
-						h3.slider_fullscreen__title(class= "titleAnim") Makers
-						p.slider_fullscreen__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus lacinia maecenas sed. Arcu commodo urna, phasellus neque.
-						.slider_fullscreen__image(class= "imageAnim")
-							+picture({
-								img: 'slider-fullscreen/image4.jpg',
-								class: 'slider_fullscreenn__image_in',
-								img_class: 'slider_fullscreen__image_img',
-								alt: 'image item',
-							})
-				li.slider_fullscreen__item.swiper-slide
-					.slider_fullscreen__link
-						h3.slider_fullscreen__title(class= "titleAnim") Makers
-						p.slider_fullscreen__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus lacinia maecenas sed. Arcu commodo urna, phasellus neque.
-						.slider_fullscreen__image(class= "imageAnim")
-							+picture({
-								img: 'slider-fullscreen/image1.jpg',
-								class: 'slider_fullscreenn__image_in',
-								img_class: 'slider_fullscreen__image_img',
-								alt: 'image item',
-							})
-				li.slider_fullscreen__item.swiper-slide
-					.slider_fullscreen__link
-						h3.slider_fullscreen__title(class= "titleAnim") Makers
-						p.slider_fullscreen__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus lacinia maecenas sed. Arcu commodo urna, phasellus neque.
-						.slider_fullscreen__image(class= "imageAnim")
-							+picture({
-								img: 'slider-fullscreen/image2.jpg',
-								class: 'slider_fullscreenn__image_in',
-								img_class: 'slider_fullscreen__image_img',
-								alt: 'image item',
-							})
-			.slider_fullscreen__scrollbar
-				.slider_fullscreen__drag
-					.slider_fullscreen__drag_arrows
-						+icon( 'slider_arrow_prev' , 'icon--size_mod')
-						+icon( 'slider_arrow_prev' , 'icon--size_mod')
-					.slider_fullscreen__drag_title Drag
-					.slider_fullscreen__drag_arrows
-						+icon( 'slider_arrow_next' , 'icon--size_mod')
-						+icon( 'slider_arrow_next' , 'icon--size_mod')
+		.slider_fullscreen__scrollbar
+			.slider_fullscreen__drag
+				.slider_fullscreen__drag_arrows
+					+icon( 'slider_arrow_prev' , 'icon--size_mod')
+					+icon( 'slider_arrow_prev' , 'icon--size_mod')
+				.slider_fullscreen__drag_title Drag
+				.slider_fullscreen__drag_arrows
+					+icon( 'slider_arrow_next' , 'icon--size_mod')
+					+icon( 'slider_arrow_next' , 'icon--size_mod')
