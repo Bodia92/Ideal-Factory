@@ -51,7 +51,6 @@
 
 .marketplace_section__text {
 	@extend %text_style;
-	max-width: 46rem;
 	@include bp($point_3, min) {
 		max-width: 46rem;
 	}
