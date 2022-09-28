@@ -9,86 +9,118 @@
 	will-change: transform;
 
 	@include bp($point_3, min) {
-		height: var(--height-footer);
-		padding: 5% 5rem 5rem;
 	}
 	@include bp($point_3 - 1) {
 		padding: 3rem 2rem;
 	}
+
+	@include bp($point_2, min) {
+		min-height: var(--height-footer);
+		padding: 18rem 5rem 5rem;
+	}
+	@include bp($point_3, $point_4) {
+		min-height: 49rem;
+		padding: 13rem 5rem 5rem;
+	}
+	@include bp($point_4 - 1) {
+		padding: 10rem 3rem 5.4rem;
+	}
 }
 
-.footer__body {
-	height: 100%;
-
+.footer__in {
 	@include bp($point_4, min) {
-		@include flex_block(row, nowrap, flex-start, center);
+		@include flex_block(row, nowrap, flex-start);
 	}
 }
 
 .footer__content {
-	@include flex_block(column, nowrap, flex-start, center);
+	@include flex_block(column, nowrap, flex-start);
 
-	height: 100%;
-
-	@include bp($point_4, min) {
-		max-width: 40rem;
+	@include bp($point_2, min) {
+		min-height: 40rem;
+		max-width: 50rem;
 		&:not(:last-child) {
 			margin-right: 2rem;
 		}
 	}
+	@include bp($point_3, $point_4) {
+		min-height: 30.6rem;
+		&:not(:last-child) {
+			margin-right: 1rem;
+		}
+	}
 	@include bp($point_4 - 1) {
 		&:not(:last-child) {
-			margin-bottom: 2rem;
+			margin-bottom: 5rem;
 		}
 	}
 }
 
 .footer__title {
-	margin: auto 0;
+	@extend %title_style_3_mod;
 	color: $white;
 
-	line-height: 1.2;
-	&:not(:last-child) {
-		margin-bottom: 2rem;
-	}
-
-	@include bp($point_3, min) {
-		font-size: 5rem;
+	@include bp($point_2, min) {
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
 	}
 	@include bp($point_3 - 1) {
-		font-size: 3rem;
+		&:not(:last-child) {
+			margin-bottom: 9rem;
+		}
+	}
+
+	@include bp($point_4 - 1) {
+		max-width: 26rem;
 	}
 }
 
 .footer__text {
+	@extend %text_style;
+
 	margin-top: auto;
 	color: $white;
-	@extend %text_style;
+
+	@include bp($point_2, min) {
+		max-width: 44rem;
+	}
+	@include bp($point_3, $point_4) {
+		max-width: 23rem;
+	}
+	@include bp($point_4 - 1) {
+		max-width: 22rem;
+	}
 }
 
 .footer__form {
+	flex-shrink: 0;
 	margin-top: auto;
 	margin-left: auto;
-	@extend %global_flex_block_row_nowrap_flex-start_center;
-	@include bp($point_1, min) {
+	@extend %global_flex_block_row_nowrap_flex-end_center;
+	@include bp($point_2, min) {
 		width: 33.333%;
 	}
-	@include bp($point_1, $point_3) {
-		width: 50%;
+	@include bp($point_3, $point_4) {
+		width: 49.6%;
 	}
-	@include bp($point_3 - 1) {
+
+	@include bp($point_4 - 1) {
 		width: 100%;
 	}
 }
 
 .footer_form__input {
 	width: 100%;
-	padding: 1rem 0;
+	padding-bottom: 1rem;
+	margin-bottom: -5px;
 	border-bottom: 1px solid rgba($white, 0.3);
 
 	@include bp($point_2, min) {
+		max-width: 36.4rem;
+		min-width: 26rem;
 		&:not(:last-child) {
-			margin-right: 6rem;
+			margin-right: 6.2rem;
 		}
 	}
 	@include bp($point_2 - 1) {
@@ -100,9 +132,6 @@
 
 .footer_form__input_email {
 	width: 100%;
-
-	font-size: 1.6rem;
-	line-height: 2.6rem;
 	color: $white;
 
 	background-color: transparent;
@@ -115,9 +144,23 @@
 	&:focus {
 		border-color: white;
 	}
+
+	@include bp($point_2, min) {
+		font-size: 1.6rem;
+		line-height: 3.4rem;
+	}
+
+	@include bp($point_3, $point_4) {
+		font-size: 1.2rem;
+		line-height: 2;
+	}
 }
 
 .footer__form_btn {
 	@extend %blue_btn_1;
-	@extend %btn_size_1;
+	@extend %btn_size_2;
+
+	@include bp($point_4 - 1) {
+		margin-bottom: 2px;
+	}
 }

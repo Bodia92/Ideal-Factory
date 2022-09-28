@@ -48,6 +48,19 @@
 	}
 }
 
+%title_style_3_mod {
+	line-height: 1.25;
+	@include bp($point_2, min) {
+		font-size: 5rem;
+	}
+	@include bp($point_3, $point_4) {
+		font-size: 3.6rem;
+	}
+	@include bp($point_4 - 1) {
+		font-size: 2.6rem;
+	}
+}
+
 %text_style {
 	font-weight: 500;
 
@@ -57,7 +70,7 @@
 	}
 	@include bp($point_3, $point_4) {
 		font-size: 1.2rem;
-		line-height: 1.7;
+		line-height: 1.6;
 	}
 	@include bp($point_4 - 1) {
 		font-size: 1.1rem;

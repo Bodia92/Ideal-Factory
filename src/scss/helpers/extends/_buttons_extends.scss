@@ -46,3 +46,25 @@
 		font-size: 1.1rem;
 	}
 }
+
+%btn_size_2 {
+	border-radius: 10rem;
+	padding: 1rem 2rem;
+
+	@include bp($point_3, min) {
+		height: 4.4rem;
+		line-height: 2.4rem;
+		font-size: 1.4rem;
+	}
+	@include bp($point_3, $point_4) {
+		height: 4rem;
+		line-height: 2rem;
+		font-size: 1.2rem;
+	}
+
+	@include bp($point_4 - 1) {
+		height: 4rem;
+		line-height: 2rem;
+		font-size: 1.1rem;
+	}
+}
