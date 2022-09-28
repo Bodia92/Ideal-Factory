@@ -38,14 +38,14 @@ section.section.slider_fullscreen
 		ul.slider_fullscreen__list.swiper-wrapper
 			each slide in slides
 				li.slider_fullscreen__item.swiper-slide
-					.slider_fullscreen__content
-						h3.slider_fullscreen__title.titleAnim= slide.title
-						p.slider_fullscreen__text= slide.text
-						.slider_fullscreen__image.imageAnim
+					.slider_fullscreen_slide
+						h3.slider_fullscreen_slide__title.titleAnim= slide.title
+						p.slider_fullscreen_slide__text= slide.text
+						.slider_fullscreen_slide__image_wrap.imageAnim
 							+picture({
 								img: slide.image.src,
-								class: 'slider_fullscreenn__image_in',
-								img_class: 'slider_fullscreen__image_img',
+								class: 'slider_fullscreen_slide__picture',
+								img_class: 'slider_fullscreen_slide__image',
 								alt: slide.image.alt,
 							})
 		.slider_fullscreen__scrollbar
