@@ -18,13 +18,13 @@
 	@include bp($point_3, min) {
 		width: 100%;
 		min-height: var(--full-screen);
-		padding: 11.2rem 12.7rem 5rem 10rem;
+		padding: 11.2rem 12.7rem var(--gl-indent) 10rem;
 	}
 
 	@include bp($point_3, $point_4) {
 		width: 100%;
 		min-height: 90rem;
-		padding: 14.6rem 7.3rem 5rem 5rem;
+		padding: 14.6rem 7.3rem var(--gl-indent) var(--gl-indent);
 	}
 
 	@include bp($point_4 - 1) {

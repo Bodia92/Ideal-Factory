@@ -14,20 +14,20 @@
 	}
 
 	@include bp($point_2, min) {
-		padding: 3rem 0 5rem 12.6rem;
+		padding: 3rem 0 var(--gl-indent) 12.6rem;
 		&::before {
 			width: 12.6rem;
 		}
 	}
 
 	@include bp($point_2 - 1) {
-		padding: 15rem 0 15rem 5rem;
+		padding: 15rem 0 15rem var(--gl-indent);
 		&::before {
-			width: 5rem;
+			width: var(--gl-indent);
 		}
 	}
 	@include bp($point_4) {
-		padding: 5rem 0 4rem 3rem;
+		padding: var(--gl-indent) 0 4rem 3rem;
 		&::before {
 			width: 3rem;
 		}

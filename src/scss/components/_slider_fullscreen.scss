@@ -38,7 +38,7 @@
 
 	@include bp($point_4, min) {
 		min-height: var(--full-screen);
-		padding: 9rem 5rem 5rem;
+		padding: 9rem var(--gl-indent) var(--gl-indent);
 	}
 
 	@include bp($point_4 - 1) {
@@ -64,7 +64,7 @@
 
 	@include bp($point_3, $point_4) {
 		&:not(:last-child) {
-			margin-bottom: 5rem;
+			margin-bottom: var(--gl-indent);
 		}
 	}
 

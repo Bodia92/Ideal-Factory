@@ -58,7 +58,7 @@
 	@include bp($point_3, $point_4) {
 		width: 100%;
 		min-height: 89rem;
-		padding: 23.2rem 5rem 4rem;
+		padding: 23.2rem var(--gl-indent) 4rem;
 	}
 
 	@include bp($point_4 - 1) {

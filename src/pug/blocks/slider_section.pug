@@ -7,6 +7,7 @@
 				image: {
 					src: 'section-image/item5.jpg',
 					alt: 'image item 5',
+					mob: 'section-image/item5_mob.jpg',
 				},
 			},
 			{
@@ -16,6 +17,7 @@
 				image: {
 					src: 'section-image/item4.jpg',
 					alt: 'image item 4',
+					mob: 'section-image/item4_mob.jpg',
 				},
 			},
 			{
@@ -25,6 +27,7 @@
 				image: {
 					src: 'section-image/item3.jpg',
 					alt: 'image item 3',
+					mob: 'section-image/item3_mob.jpg',
 				},
 			}
 		];
@@ -47,7 +50,10 @@ section.section.slider_section
 										+icon( 'arrow-next' , 'icon--size_mod')
 						.slider_section_slide__image_wrap.imageAnim
 							+picture({
+								media: 768,
+								is2x: false,
 								img: slide.image.src,
+								img_mob: slide.image.mob,
 								class: 'slider_section_slide__picture',
 								img_class: 'slider_section_slide__image',
 								alt: slide.image.alt,

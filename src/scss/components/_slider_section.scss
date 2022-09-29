@@ -22,12 +22,12 @@
 
 	@include bp($point_2, min) {
 		min-height: var(--full-screen);
-		padding: 5rem 5rem 13rem;
+		padding: var(--gl-indent) var(--gl-indent) 13rem;
 	}
 
 	@include bp($point_3, $point_4) {
 		min-height: 90rem;
-		padding: 16rem 5rem 5rem;
+		padding: 16rem var(--gl-indent) var(--gl-indent);
 	}
 	@include bp($point_4 - 1) {
 		min-height: 69rem;
@@ -104,7 +104,7 @@
 	@include bp($point_2, min) {
 		flex-shrink: 0;
 		width: 33.333%;
-		padding: 5rem 5rem 5rem 7.3rem;
+		padding: var(--gl-indent) var(--gl-indent) var(--gl-indent) 7.3rem;
 		margin-top: auto;
 	}
 
