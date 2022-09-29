@@ -26,8 +26,8 @@ const someSlider = () => {
 			},
 			// loop: true,
 			navigation: {
-				prevEl: '.slider_section_arrow--prev',
-				nextEl: '.slider_section_arrow--next',
+				prevEl: '.slider_section_slide__content_arrow--prev',
+				nextEl: '.slider_section_slide__content_arrow--next',
 			},
 		});
 	}

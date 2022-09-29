@@ -5,110 +5,151 @@
 	background-color: $section_bg;
 }
 
-.slider_section__body {
-	@include bp($point_2, min) {
+.slider_section_slide {
+	@include bp($point_4, min) {
 		@include flex_block(row, nowrap, flex-start);
 	}
 
 	@include bp($point_2 - 1) {
-		flex-direction: column;
-		height: 100%;
-		text-align: center;
 	}
 }
 
-.slider_section_title {
-	margin: auto 0;
-	color: $white;
-	@extend %title_style_2_mod;
+.slider_section_slide__content_left {
+	width: 100%;
+	margin-left: auto;
+	@include flex_block(column, nowrap, flex-start);
+
 	@include bp($point_2, min) {
-		width: 33.333%;
-		padding: 5rem;
+		min-height: var(--full-screen);
+		padding: 5rem 5rem 13rem;
 	}
 
-	@include bp($point_2 - 1) {
-		height: 100%;
-		padding: 4rem 2rem;
-		@include flex_block(row, nowrap, center, center);
+	@include bp($point_3, $point_4) {
+		min-height: 90rem;
+		padding: 16rem 5rem 5rem;
+	}
+	@include bp($point_4 - 1) {
+		min-height: 69rem;
+		padding: 11rem 3rem 4.8rem;
 	}
 }
 
-.slider_section__image {
+.slider_section_slide__title {
+	@extend %title_style_2_mod;
+
+	color: $white;
+
+	@include bp($point_2, min) {
+		max-width: 49rem;
+		margin: auto 0;
+	}
+
+	@include bp($point_3, $point_4) {
+		margin-top: auto;
+		margin-left: -5px;
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	@include bp($point_4 - 1) {
+		margin-top: auto;
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+.slider_section_slide__image_wrap {
+	position: relative;
 	flex-shrink: 0;
 	@include bp($point_2, min) {
 		width: 33.333%;
-		height: var(--full-screen);
+		min-height: var(--full-screen);
 	}
-	@include bp($point_2 - 1) {
-		height: 40vh;
+	@include bp($point_3, $point_4) {
+		min-height: 90rem;
+		width: 42%;
+	}
+	@include bp($point_4 - 1) {
+		min-height: 32rem;
 		width: 100%;
 	}
 }
 
-.slider_section__image_in {
+.slider_section_slide__picture {
+	@extend %position_absolute;
 }
 
-.slider_section__image_img {
+.slider_section_slide__image {
 	@extend %cover_img;
 }
 
-.slider_section__content {
+.slider_section_slide__content_tablet {
+	@include bp($point_2, min) {
+		display: none;
+	}
+	@include bp($point_3) {
+		display: block;
+		margin-top: auto;
+	}
+}
+
+.slider_section_slide__content_right {
 	@include bp($point_2, min) {
 		width: 33.333%;
+		padding: 5rem 5rem 5rem 7.3rem;
+		flex-shrink: 0;
 		margin-top: auto;
-		padding: 5rem 5rem 10%;
 	}
-	@include bp($point_2 - 1) {
-		padding: 2rem;
-		margin: auto 0;
+	@include bp($point_3) {
+		display: none;
 	}
 }
 
-.slider_section__content_title {
-	font-size: 2.4rem;
-	line-height: 1.4;
+.slider_section_slide__content_title {
+	@extend %title_style_5_mod;
 	color: $white;
-	&:not(:last-child) {
-		margin-bottom: 2rem;
+
+	@include bp($point_2, min) {
+		&:not(:last-child) {
+			margin-bottom: 6rem;
+		}
+	}
+	@include bp($point_3) {
+		&:not(:last-child) {
+			margin-bottom: 3rem;
+		}
 	}
 }
-.slider_section__content_text {
-	color: $white;
+.slider_section_slide__content_text {
 	@extend %text_style;
+	color: $white;
 
 	@include bp($point_2, min) {
-		display: -webkit-box;
-		-webkit-line-clamp: 12;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
+		max-width: 46rem;
+		&:not(:last-child) {
+			margin-bottom: 12rem;
+		}
 	}
-	@include bp($point_2 - 1) {
-		display: -webkit-box;
-		-webkit-line-clamp: 4;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
+	@include bp($point_3, $point_4) {
+		max-width: 34rem;
+		&:not(:last-child) {
+			margin-bottom: 6rem;
+		}
+	}
+	@include bp($point_4 - 1) {
+		&:not(:last-child) {
+			margin-bottom: 6rem;
+		}
 	}
 }
 
-.slider_section_arrows {
-	position: absolute;
-	z-index: 100;
+.slider_section_slide__content_arrows {
 	@extend %global_flex_block_row_nowrap_flex-start_center;
-
-	@include bp($point_2, min) {
-		right: 22%;
-		bottom: 5rem;
-	}
-	@include bp($point_2 - 1) {
-		left: 50%;
-		top: 50%;
-		width: 100%;
-		padding: 0 1rem;
-		transform: translate(-50%, -50%);
-	}
 }
 
-.slider_section_arrow {
+.slider_section_slide__content_arrow {
 	z-index: 100;
 	width: 4rem;
 	height: 4rem;
@@ -120,20 +161,16 @@
 	transition: opacity 0.3s ease;
 	cursor: pointer;
 
-	&:not(:last-child) {
-		margin-right: 4rem;
-	}
-	@include bp($point_2 - 1) {
+	@include bp($point_2, min) {
 		&:not(:last-child) {
-			margin-right: auto;
+			margin-right: 3.8rem;
 		}
 	}
-}
-
-.slider_section_arrow--prev {
-}
-
-.slider_section_arrow--next {
+	@include bp($point_3) {
+		&:not(:last-child) {
+			margin-right: 3.4rem;
+		}
+	}
 }
 
 .swiper-button-disabled {

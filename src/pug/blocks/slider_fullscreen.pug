@@ -1,5 +1,5 @@
 -
-	let	slides = [
+	let	slides_fullscreen = [
 			{
 				title: 'Have A Go Hero’s',
 				text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus lacinia maecenas sed. Arcu commodo urna, 	phasellus neque.',
@@ -36,7 +36,7 @@
 section.section.slider_fullscreen
 	.slider_fullscreen__swiper.swiper
 		ul.slider_fullscreen__list.swiper-wrapper
-			each slide in slides
+			each slide in slides_fullscreen
 				li.slider_fullscreen__item.swiper-slide
 					.slider_fullscreen_slide
 						h3.slider_fullscreen_slide__title.titleAnim= slide.title

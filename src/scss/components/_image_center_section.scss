@@ -8,11 +8,6 @@
 	@include bp($point_4, min) {
 		@include flex_block(row, nowrap, flex-start);
 	}
-
-	@include bp($point_2 - 1) {
-		// flex-direction: column;
-		// height: 100%;
-	}
 }
 
 .image_section__content {
@@ -74,9 +69,9 @@
 }
 
 .image_section__image {
+	position: relative;
 	flex-shrink: 0;
 
-	position: relative;
 	@include bp($point_3, min) {
 		width: 33.333%;
 		min-height: var(--full-screen);
