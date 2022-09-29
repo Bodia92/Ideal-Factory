@@ -14,6 +14,7 @@
 
 .makers_section__content {
 	@include flex_block(column, nowrap, flex-start);
+
 	@include bp($point_3, min) {
 		width: 100%;
 		min-height: var(--full-screen);
@@ -36,22 +37,26 @@
 	@extend %title_style_1_mod;
 
 	@include bp($point_3, min) {
-		margin-top: auto;
 		max-width: 50rem;
+		margin-top: auto;
+
 		&:not(:last-child) {
 			margin-bottom: 1.2rem;
 		}
 	}
 	@include bp($point_3, $point_4) {
-		margin-top: auto;
 		max-width: 32rem;
+		margin-top: auto;
+
 		&:not(:last-child) {
 			margin-bottom: 1.2rem;
 		}
 	}
+
 	@include bp($point_4 - 1) {
-		margin-top: auto;
 		max-width: 24rem;
+		margin-top: auto;
+
 		&:not(:last-child) {
 			margin-bottom: 6rem;
 		}
@@ -62,13 +67,15 @@
 	@extend %text_style;
 
 	@include bp($point_3, min) {
+		max-width: 44rem;
 		margin-top: auto;
 		margin-left: auto;
-		max-width: 44rem;
 	}
+
 	@include bp($point_3, $point_4) {
-		margin-top: auto;
 		max-width: 36rem;
+		margin-top: auto;
+
 		&:not(:last-child) {
 			margin-bottom: 1rem;
 		}
@@ -79,7 +86,7 @@
 	}
 }
 
-.makers_section__image {
+.makers_section__image_wrap {
 	position: relative;
 	flex-shrink: 0;
 
@@ -93,15 +100,15 @@
 	}
 
 	@include bp($point_4 - 1) {
-		min-height: 32rem;
 		width: 100%;
+		min-height: 32rem;
 	}
 }
 
-.makers_section__image_in {
+.makers_section__pictures {
 	@extend %position_absolute;
 }
 
-.makers_section__image_img {
+.makers_section__image {
 	@extend %cover_img;
 }

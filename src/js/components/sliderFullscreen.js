@@ -6,10 +6,10 @@ import 'swiper/css/scrollbar';
 const sliderFullscreen = () => {
 	const sliderClass = '.slider_fullscreen__swiper';
 
-	let slideEl = document.querySelectorAll(sliderClass);
+	let $slideEl = document.querySelectorAll(sliderClass);
 
-	if (typeof (slideEl) !== 'undefined' && slideEl != null) {
-		let sliderEl = new Swiper(sliderClass, {
+	if ($slideEl !== undefined) {
+		let $sliderEl = new Swiper(sliderClass, {
 			modules: [Scrollbar],
 
 			slidesPerView: 'auto',

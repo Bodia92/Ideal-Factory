@@ -1,13 +1,13 @@
 const scrollToSection = () => {
-	const scrollBtn = document.querySelector('.main__btn');
-	const section = document.querySelectorAll('.section');
+	const $scrollBtn = document.querySelector('.main_section__btn');
+	const $section = document.querySelectorAll('.section');
 	let position = 0;
 	let heightSection = Math.ceil(document.documentElement.clientHeight);
 	let positionSection;
 	let scrollCord;
 
 	const scrollToNext = () => {
-		if (scrollBtn && section) {
+		if ($scrollBtn && $section) {
 			position = Math.ceil(window.pageYOffset);
 			positionSection = Math.abs(position - heightSection);
 			if (position === 0) {
@@ -22,7 +22,7 @@ const scrollToSection = () => {
 		}
 	};
 
-	scrollBtn.addEventListener('click', () => {
+	$scrollBtn.addEventListener('click', () => {
 		scrollToNext();
 	});
 };

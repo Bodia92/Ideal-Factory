@@ -9,10 +9,10 @@ const someSlider = () => {
 	const sliderClass = '.someSlider';
 	// buildSliders(sliderClass);
 
-	let slideEl = document.querySelectorAll(sliderClass);
+	let $slideEl = document.querySelectorAll(sliderClass);
 
-	if (typeof (slideEl) !== 'undefined' && slideEl != null) {
-		let sliderEl = new Swiper(sliderClass, {
+	if ($slideEl !== undefined) {
+		let $sliderEl = new Swiper(sliderClass, {
 			modules: [Navigation, EffectFade],
 			observer: true,
 			observeParents: true,
@@ -26,8 +26,8 @@ const someSlider = () => {
 			},
 			// loop: true,
 			navigation: {
-				prevEl: '.slider_section_arrow--prev',
-				nextEl: '.slider_section_arrow--next',
+				prevEl: '.slider_section_slide__content_arrow--prev',
+				nextEl: '.slider_section_slide__content_arrow--next',
 			},
 		});
 	}

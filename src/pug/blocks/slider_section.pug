@@ -1,48 +1,62 @@
+-
+	let	array_slider = [
+			{
+				title: 'Bespoke made, quality assured',
+				content_title: 'Limited Editions',
+				content_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus lacinia maecenas sed. Arcu commodo urna, phasellus neque.',
+				image: {
+					src: 'section-image/item5.jpg',
+					alt: 'image item 5',
+				},
+			},
+			{
+				title: 'A place for makers alike',
+				content_title: 'Limited',
+				content_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus lacinia maecenas sed. Arcu commodo urna, phasellus neque.',
+				image: {
+					src: 'section-image/item4.jpg',
+					alt: 'image item 4',
+				},
+			},
+			{
+				title: 'Bespoke made, quality assured',
+				content_title: 'Editions',
+				content_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus lacinia maecenas sed. Arcu commodo urna, 	phasellus neque.',
+				image: {
+					src: 'section-image/item3.jpg',
+					alt: 'image item 3',
+				},
+			}
+		];
+
 section.section.slider_section
-	.section_in
-		.slider_section_arrows
-			button.slider_section_arrow.slider_section_arrow--prev(type='button')
-				+icon( 'arrow-prev' , 'icon--size_mod')
-			button.slider_section_arrow.slider_section_arrow--next(type='button')
-				+icon( 'arrow-next' , 'icon--size_mod')
-		.slider_section_list.someSlider.swiper
-			.slider_section_wrapper.swiper-wrapper
-				.slider_section_slide.swiper-slide
-					.slider_section__body
-						h2.slider_section_title(class= "titleAnim") Bespoke made, quality assured
-						.slider_section__image(class= "imageAnim")
+	.slider_section_swiper.someSlider.swiper
+		ul.slider_section__list.swiper-wrapper
+			each slide in array_slider
+				li.slider_section__item.swiper-slide
+					.slider_section_slide
+						.slider_section_slide__content_left
+							h2.slider_section_slide__title.titleAnim= slide.title
+							.slider_section_slide__content_tablet.textAnim
+								h3.slider_section_slide__content_title= slide.content_title
+								p.slider_section_slide__content_text= slide.content_text
+								.slider_section_slide__content_arrows
+									button.slider_section_slide__content_arrow.slider_section_slide__content_arrow--prev(type='button')
+										+icon( 'arrow-prev' , 'icon--size_mod')
+									button.slider_section_slide__content_arrow.slider_section_slide__content_arrow--next(type='button')
+										+icon( 'arrow-next' , 'icon--size_mod')
+						.slider_section_slide__image_wrap.imageAnim
 							+picture({
-								img: 'section-image/item5.jpg',
-								class: 'slider_section__image_in',
-								img_class: 'slider_section__image_img',
-								alt: 'image slider',
+								img: slide.image.src,
+								class: 'slider_section_slide__picture',
+								img_class: 'slider_section_slide__image',
+								alt: slide.image.alt,
 							})
-						.slider_section__content(class= "textAnim")
-							h3.slider_section__content_title Limited Editions
-							p.slider_section__content_text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus lacinia maecenas sed. Arcu commodo urna, phasellus neque.
-				.slider_section_slide.swiper-slide
-					.slider_section__body
-						h2.slider_section_title(class= "titleAnim") A place for makers alike
-						.slider_section__image(class= "imageAnim")
-							+picture({
-								img: 'section-image/item4.jpg',
-								class: 'slider_section__image_in',
-								img_class: 'slider_section__image_img',
-								alt: 'image slider',
-							})
-						.slider_section__content(class= "textAnim")
-							h3.slider_section__content_title Limited
-							p.slider_section__content_text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus
-				.slider_section_slide.swiper-slide
-					.slider_section__body
-						h2.slider_section_title(class= "titleAnim") Bespoke made, quality assured
-						.slider_section__image(class= "imageAnim")
-							+picture({
-								img: 'section-image/item3.jpg',
-								class: 'slider_section__image_in',
-								img_class: 'slider_section__image_img',
-								alt: 'image slider',
-							})
-						.slider_section__content(class= "textAnim")
-							h3.slider_section__content_title Editions
-							p.slider_section__content_text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu nisl morbi odio semper iaculis etiam elit. Arcu enim, et suspendisse condimentum quam elementum lacus, mi, a. Bibendum vitae in eget posuere vitae est. Diam pulvinar turpis rhoncus condimentum. Senectus nam sed etiam lectus mauris aliquet et. Vehicula mauris nullam placerat pretium eleifend.
+						.slider_section_slide__content_right.textAnim
+							h3.slider_section_slide__content_title= slide.content_title
+							p.slider_section_slide__content_text= slide.content_text
+							.slider_section_slide__content_arrows
+								button.slider_section_slide__content_arrow.slider_section_slide__content_arrow--prev(type='button')
+									+icon( 'arrow-prev' , 'icon--size_mod')
+								button.slider_section_slide__content_arrow.slider_section_slide__content_arrow--next(type='button')
+									+icon( 'arrow-next' , 'icon--size_mod')

@@ -6,36 +6,29 @@ import 'swiper/css/scrollbar';
 const scrollbarSliderSection = () => {
 	const sliderClass = '.scrollbar_slider_section__swiper';
 
-	let slideEl = document.querySelectorAll(sliderClass);
+	let $slideEl = document.querySelectorAll(sliderClass);
 
-	if (typeof (slideEl) !== 'undefined' && slideEl != null) {
-		let sliderEl = new Swiper(sliderClass, {
+	if ($slideEl !== undefined) {
+		let $sliderEl = new Swiper(sliderClass, {
 			modules: [Scrollbar],
 			observer: true,
 			observeParents: true,
-			spaceBetween: 20,
 			scrollbar: {
-				el: '.swiper-scrollbar',
+				el: '.scrollbar_slider_section__scrollbar',
 				draggable: true,
 				dragSize: 'auto',
+				dragClass: 'scrollbar_slider_section__scrollbar_drag',
 			},
 			slidesPerView: 'auto',
-			// slidesPerGroup: 3,
 			speed: 800,
 			loop: true,
 
 			breakpoints: {
 				320: {
-					slidesPerView: 1.3,
-				},
-				640: {
-					slidesPerView: 2.1,
+					spaceBetween: 10,
 				},
 				992: {
-					slidesPerView: 2.5,
-				},
-				1023: {
-					slidesPerView: 'auto',
+					spaceBetween: 20,
 				},
 			},
 		});

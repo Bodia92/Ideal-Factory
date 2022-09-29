@@ -86,6 +86,22 @@
 	}
 }
 
+%title_style_5_mod {
+	font-weight: 500;
+	@include bp($point_2, min) {
+		font-size: 2.4rem;
+		line-height: 142%;
+	}
+	@include bp($point_3, $point_4) {
+		font-size: 2.2rem;
+		line-height: 145%;
+	}
+	@include bp($point_4 - 1) {
+		font-size: 1.8rem;
+		line-height: 156%;
+	}
+}
+
 %text_style {
 	font-weight: 500;
 
