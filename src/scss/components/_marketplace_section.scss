@@ -15,7 +15,7 @@
 	margin-right: auto;
 
 	@include bp($point_3, min) {
-		min-height: 100vh;
+		min-height: var(--full-screen);
 		flex: 1 1 auto;
 		padding: 10rem 5rem 5rem;
 	}
@@ -67,7 +67,7 @@
 	position: relative;
 	@include bp($point_3, min) {
 		width: 33.333%;
-		min-height: 100vh;
+		min-height: var(--full-screen);
 	}
 	@include bp($point_3, $point_4) {
 		width: 42%;
