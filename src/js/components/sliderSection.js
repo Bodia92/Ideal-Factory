@@ -9,10 +9,10 @@ const someSlider = () => {
 	const sliderClass = '.someSlider';
 	// buildSliders(sliderClass);
 
-	let slideEl = document.querySelectorAll(sliderClass);
+	let $slideEl = document.querySelectorAll(sliderClass);
 
-	if (typeof (slideEl) !== 'undefined' && slideEl != null) {
-		let sliderEl = new Swiper(sliderClass, {
+	if ($slideEl !== undefined) {
+		let $sliderEl = new Swiper(sliderClass, {
 			modules: [Navigation, EffectFade],
 			observer: true,
 			observeParents: true,

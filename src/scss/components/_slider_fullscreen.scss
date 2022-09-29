@@ -25,19 +25,9 @@
 	@media (any-hover: hover) {
 		&:hover {
 			.slider_fullscreen__text {
+				margin-top: 0;
 				opacity: 1;
 				visibility: visible;
-				margin-top: 0;
-			}
-		}
-	}
-
-	@media (hover: none) {
-		&:active {
-			.slider_fullscreen__text {
-				opacity: 1;
-				visibility: visible;
-				margin-top: 0;
 			}
 		}
 	}
@@ -59,6 +49,7 @@
 
 .slider_fullscreen_slide__title {
 	@extend %title_style_4_mod;
+
 	position: relative;
 	z-index: 10;
 	max-width: 40rem;
@@ -86,11 +77,11 @@
 
 .slider_fullscreen_slide__text {
 	position: relative;
+	z-index: 10;
 
 	font-weight: 500;
 	color: $white;
 
-	z-index: 10;
 	transition: all 0.3s ease, margin 0.4s ease;
 
 	display: -webkit-box;
@@ -100,8 +91,10 @@
 
 	@include bp($point_2, min) {
 		max-width: 31rem;
+
 		font-size: 1.4rem;
 		line-height: 171%;
+
 		@media (any-hover: hover) {
 			margin-bottom: -12rem;
 			opacity: 0;
@@ -114,6 +107,7 @@
 		font-size: 1.4rem;
 		line-height: 171%;
 	}
+
 	@include bp($point_4 - 1) {
 		font-size: 1.1rem;
 		line-height: 182%;
@@ -156,12 +150,12 @@
 }
 
 .slider_fullscreen__drag_arrows {
+	@extend %global_flex_block_row_nowrap_center_center;
+
 	flex-shrink: 0;
 	width: 2rem;
 	height: 2rem;
 	padding: 5px;
-
-	@extend %global_flex_block_row_nowrap_center_center;
 
 	background-color: $white;
 	border-radius: 50%;
@@ -169,11 +163,11 @@
 }
 
 .slider_fullscreen__drag_title {
+	@extend %global_flex_block_row_nowrap_center;
+
 	max-width: 7rem;
 	padding: 1rem 2rem;
 	margin: 0 5px;
-
-	@extend %global_flex_block_row_nowrap_center;
 
 	font-size: 1.4rem;
 	line-height: 171%;

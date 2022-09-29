@@ -6,10 +6,10 @@ import 'swiper/css/scrollbar';
 const scrollbarSliderSection = () => {
 	const sliderClass = '.scrollbar_slider_section__swiper';
 
-	let slideEl = document.querySelectorAll(sliderClass);
+	let $slideEl = document.querySelectorAll(sliderClass);
 
-	if (typeof (slideEl) !== 'undefined' && slideEl != null) {
-		let sliderEl = new Swiper(sliderClass, {
+	if ($slideEl !== undefined) {
+		let $sliderEl = new Swiper(sliderClass, {
 			modules: [Scrollbar],
 			observer: true,
 			observeParents: true,

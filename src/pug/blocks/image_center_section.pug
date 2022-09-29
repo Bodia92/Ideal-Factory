@@ -3,15 +3,15 @@ section.section.image_section
 		.image_section__content
 			a.image_section__logo(href="#")
 				img(src="images/logo-white.svg", class="image_section__logo_img" alt="logo")
-			h2.image_section_title(class= "titleAnim") Design, Build & Sell your products
+			h2.image_section_title.titleAnim Design, Build & Sell your products
 			.image_section__text_tablet.textAnim
 				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus lacinia maecenas sed. Arcu commodo urna, phasellus neque.
 				p Tellus dictum elementum purus pharetra dolor sit volutpat pretium. Elementum vitae risus sit quis. Sed quis gravida aliquet sodales malesuada potenti venenatis eu imperdiet.
-		.image_section__image.imageAnim
+		.image_section__image_wrap.imageAnim
 			+picture({
 				img: 'section-image/item2.jpg',
-				class: 'image_section__image_in',
-				img_class: 'image_section__image_img',
+				class: 'image_section__pictures',
+				img_class: 'image_section__image',
 				alt: 'image item',
 			})
 		.image_section__text.textAnim

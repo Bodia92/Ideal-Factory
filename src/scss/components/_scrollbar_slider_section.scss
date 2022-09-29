@@ -40,10 +40,8 @@
 	@include bp($point_2, min) {
 		min-height: var(--full-screen);
 	}
-	@include bp($point_3, $point_4) {
-		min-height: 100%;
-	}
-	@include bp($point_4 - 1) {
+
+	@include bp($point_2 - 1) {
 		min-height: 100%;
 	}
 }
@@ -54,11 +52,13 @@
 			margin-bottom: 6rem;
 		}
 	}
+
 	@include bp($point_3, $point_4) {
 		&:not(:last-child) {
 			margin-bottom: 3.4rem;
 		}
 	}
+
 	@include bp($point_4 - 1) {
 		&:not(:last-child) {
 			margin-bottom: 2.1rem;
@@ -72,9 +72,11 @@
 	@include bp($point_2, min) {
 		min-height: 57.8rem;
 	}
+
 	@include bp($point_3, $point_4) {
 		height: 32.8rem;
 	}
+
 	@include bp($point_4 - 1) {
 		height: 22rem;
 	}
@@ -88,6 +90,7 @@
 	max-width: 167rem;
 	width: 100%;
 	height: 5px;
+
 	background-color: $grey;
 }
 
@@ -96,6 +99,7 @@
 	height: 100%;
 	left: 0;
 	top: 0;
+
 	background-color: #657de9;
 	border-radius: 10px;
 }

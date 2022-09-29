@@ -46,14 +46,16 @@
 }
 
 .image_section__logo_img {
+	@extend %contain_img;
+
 	display: block;
 	width: 100%;
 	height: 100%;
-	@extend %contain_img;
 }
 
 .image_section_title {
 	@extend %title_style_2_mod;
+
 	margin: auto 0;
 
 	color: $white;
@@ -68,7 +70,7 @@
 	}
 }
 
-.image_section__image {
+.image_section__image_wrap {
 	position: relative;
 	flex-shrink: 0;
 
@@ -82,17 +84,18 @@
 	}
 
 	@include bp($point_4 - 1) {
-		min-height: 24rem;
 		width: 100%;
+		min-height: 24rem;
 	}
 }
 
-.image_section__image_in {
+.image_section__pictures {
 	@extend %position_absolute;
 }
 
-.image_section__image_img {
+.image_section__image {
 	@extend %cover_img;
+
 	@include bp($point_1 - 1) {
 		object-position: left;
 	}
@@ -100,6 +103,7 @@
 
 .image_section__text_tablet {
 	@extend %text_style;
+
 	color: $white;
 
 	p {
@@ -111,18 +115,16 @@
 	@include bp($point_1, min) {
 		display: none;
 	}
-	@include bp($point_1, $point_4) {
+
+	@include bp($point_1 - 1) {
 		display: block;
 		max-width: 36rem;
-	}
-
-	@include bp($point_4 - 1) {
-		display: block;
 	}
 }
 
 .image_section__text {
 	@extend %text_style;
+
 	color: $white;
 
 	@include bp($point_1, min) {
@@ -130,13 +132,16 @@
 		width: 33.333%;
 		margin-top: auto;
 		padding: 6rem 6rem 6.6rem 7.3rem;
+
 		p {
 			max-width: 43rem;
+
 			&:not(:last-child) {
 				margin-bottom: 1.5rem;
 			}
 		}
 	}
+
 	@include bp($point_1 - 1) {
 		display: none;
 	}
