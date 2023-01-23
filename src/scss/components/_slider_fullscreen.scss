@@ -50,6 +50,8 @@
 .slider_fullscreen_slide__body {
 	position: relative;
 	z-index: 10;
+
+	cursor: pointer;
 }
 
 .slider_fullscreen_slide__title {
@@ -58,8 +60,6 @@
 	max-width: 40rem;
 
 	color: $white;
-
-	cursor: pointer;
 
 	@include bp($point_2, min) {
 		&:not(:last-child) {
@@ -95,7 +95,7 @@
 	opacity: 0;
 	visibility: hidden;
 
-	transition: opacity 0.3s ease, margin 0.3s ease;
+	transition: opacity 0.3s ease, margin 0.6s ease;
 
 	.slider_fullscreen_slide__body:hover &,
 	.slider_fullscreen_slide__body:focus & {
