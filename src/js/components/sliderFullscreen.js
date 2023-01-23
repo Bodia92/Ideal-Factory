@@ -30,7 +30,7 @@ const sliderFullscreen = () => {
 						dragSize: 'auto',
 						dragClass: 'slider_fullscreen__drag',
 					},
-					slidesPerView: 'auto',
+					slidesPerView: 2.6,
 				},
 			},
 		});

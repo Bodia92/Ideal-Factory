@@ -47,14 +47,19 @@
 	}
 }
 
+.slider_fullscreen_slide__body {
+	position: relative;
+	z-index: 10;
+}
+
 .slider_fullscreen_slide__title {
 	@extend %title_style_4_mod;
 
-	position: relative;
-	z-index: 10;
 	max-width: 40rem;
 
 	color: $white;
+
+	cursor: pointer;
 
 	@include bp($point_2, min) {
 		&:not(:last-child) {
@@ -76,9 +81,6 @@
 }
 
 .slider_fullscreen_slide__text {
-	position: relative;
-	z-index: 10;
-
 	font-weight: 500;
 	color: $white;
 
@@ -89,6 +91,19 @@
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 
+	margin-bottom: -12rem;
+	opacity: 0;
+	visibility: hidden;
+
+	transition: opacity 0.3s ease, margin 0.3s ease;
+
+	.slider_fullscreen_slide__body:hover &,
+	.slider_fullscreen_slide__body:focus & {
+		margin-bottom: 0;
+		opacity: 1;
+		visibility: visible;
+	}
+
 	@include bp($point_2, min) {
 		max-width: 31rem;
 
@@ -96,9 +111,6 @@
 		line-height: 171%;
 
 		@media (any-hover: hover) {
-			margin-bottom: -12rem;
-			opacity: 0;
-			visibility: hidden;
 		}
 	}
 	@include bp($point_3, $point_4) {

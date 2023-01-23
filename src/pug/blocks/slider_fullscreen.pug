@@ -39,14 +39,16 @@ section.section.slider_fullscreen
 			each slide in slides_fullscreen
 				li.slider_fullscreen__item.swiper-slide
 					.slider_fullscreen_slide
-						h3.slider_fullscreen_slide__title.titleAnim= slide.title
-						p.slider_fullscreen_slide__text= slide.text
+						.slider_fullscreen_slide__body
+							h3.slider_fullscreen_slide__title.titleAnim= slide.title
+							p.slider_fullscreen_slide__text= slide.text
 						.slider_fullscreen_slide__image_wrap.imageAnim
 							+picture({
 								img: slide.image.src,
 								class: 'slider_fullscreen_slide__picture',
 								img_class: 'slider_fullscreen_slide__image',
 								alt: slide.image.alt,
+								loading: 'lazy'
 							})
 		.slider_fullscreen__scrollbar
 			.slider_fullscreen__drag
