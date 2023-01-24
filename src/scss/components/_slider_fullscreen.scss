@@ -84,6 +84,9 @@
 	font-weight: 500;
 	color: $white;
 
+	font-size: 1.4rem;
+	line-height: 171%;
+
 	transition: all 0.3s ease, margin 0.4s ease;
 
 	display: -webkit-box;
@@ -106,22 +109,13 @@
 
 	@include bp($point_2, min) {
 		max-width: 31rem;
-
-		font-size: 1.4rem;
-		line-height: 171%;
-
-		@media (any-hover: hover) {
-		}
 	}
 	@include bp($point_3, $point_4) {
 		max-width: 34rem;
-
-		font-size: 1.4rem;
-		line-height: 171%;
 	}
 
 	@include bp($point_4 - 1) {
-		font-size: 1.1rem;
+		font-size: 1.2rem;
 		line-height: 182%;
 	}
 }

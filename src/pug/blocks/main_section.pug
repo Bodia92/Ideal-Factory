@@ -4,7 +4,7 @@ section.section.main_section
 				a.main_section__logo(href="#")
 					img(src="images/logo.svg", class="main_section__logo_img" alt="logo")
 				h1.main_section__title Where imagination & creativity come to life
-				button.main_section__btn(type="button") Scroll
+				button.main_section__btn(type="button" arial-lebel="scroll bottom") Scroll
 			.main_section__image_wrap
 				+picture({
 					media: 768,
@@ -14,6 +14,7 @@ section.section.main_section
 					class: 'main_section__pictures',
 					img_class: 'main_section__image',
 					alt: 'main image',
+					loading: 'lazy'
 				})
 
 

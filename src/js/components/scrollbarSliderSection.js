@@ -21,9 +21,9 @@ const scrollbarSliderSection = () => {
 			},
 			slidesPerView: 'auto',
 			speed: 800,
-			loop: true,
 			lazy: true,
 			preloadImages: false,
+			watchSlidesProgress: true,
 
 			breakpoints: {
 				320: {

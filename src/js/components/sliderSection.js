@@ -3,11 +3,9 @@ import Swiper, { Navigation, EffectFade } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
-// import buildSliders from './buildSwiper';
 
 const someSlider = () => {
 	const sliderClass = '.someSlider';
-	// buildSliders(sliderClass);
 
 	let $slideEl = document.querySelectorAll(sliderClass);
 
@@ -21,10 +19,12 @@ const someSlider = () => {
 			effect: 'fade',
 			allowTouchMove: false,
 			speed: 800,
+			lazy: true,
+			preloadImages: false,
+			watchSlidesProgress: true,
 			fadeEffect: {
 				crossFade: true,
 			},
-			// loop: true,
 			navigation: {
 				prevEl: '.slider_section_slide__content_arrow--prev',
 				nextEl: '.slider_section_slide__content_arrow--next',

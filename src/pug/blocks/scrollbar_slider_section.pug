@@ -1,50 +1,45 @@
 -
 	let scrollbarSlider= [
 		{
-			image: {
-				src: 'images/slider-image/slider1.jpg',
-				alt: 'image scrollbar 1'
-			},
+			src: 'slider-image/slider1.jpg',
+			alt: 'image scrollbar 1'
 		},
 		{
-			image: {
-				src: 'images/slider-image/slider2.jpg',
-				alt: 'image scrollbar 2'
-			},
+			src: 'slider-image/slider2.jpg',
+			alt: 'image scrollbar 2'
 		},
 		{
-			image: {
-				src: 'images/slider-image/slider3.jpg',
-				alt: 'image scrollbar 3'
-			},
+			src: 'slider-image/slider3.jpg',
+			alt: 'image scrollbar 3',
 		},
 		{
-			image: {
-				src: 'images/slider-image/slider1.jpg',
-				alt: 'image scrollbar 4'
-			},
+			src: 'slider-image/slider1.jpg',
+			alt: 'image scrollbar 4'
 		},
 		{
-			image: {
-				src: 'images/slider-image/slider2.jpg',
-				alt: 'image scrollbar 5'
-			},
+			src: 'slider-image/slider2.jpg',
+			alt: 'image scrollbar 5'
 		},
 		{
-			image: {
-				src: 'images/slider-image/slider3.jpg',
-				alt: 'image scrollbar 6'
-			},
+			src: 'slider-image/slider3.jpg',
+			alt: 'image scrollbar 6'
 		}
 	];
 
 
 .section.scrollbar_slider_section
 	.section_in.scrollbar_section_in
-		.scrollbar_slider_section__swiper
+		.scrollbar_slider_section__swiper.swiper
 			.scrollbar_slider_section__wrapper.swiper-wrapper
 				each slide in scrollbarSlider
 					.scrollbar_slider_section__slide.swiper-slide
-						img.scrollbar_slider_section__image.imageAnim(src= slide.image.src, alt= slide.image.alt)
+						//- img.scrollbar_slider_section__image.imageAnim(src= slide.image.src, alt= slide.image.alt)
+						+picture({
+							img: slide.src,
+							class: 'scrollbar_slider_section__image',
+							img_class: 'scrollbar_slider_section__image_in swiper-lazy',
+							alt: slide.alt,
+							loading: 'lazy',
+						})
 			.scrollbar_slider_section__scrollbar
 				.scrollbar_slider_section__scrollbar_drag

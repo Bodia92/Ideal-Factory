@@ -14,7 +14,10 @@ const sliderFullscreen = () => {
 
 			slidesPerView: 'auto',
 			speed: 1200,
+			lazy: true,
+			preloadImages: false,
 			// loop: true,
+			watchSlidesProgress: true,
 
 			breakpoints: {
 				320: {

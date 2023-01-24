@@ -109,13 +109,9 @@
 		font-size: 1.4rem;
 		line-height: 171%;
 	}
-	@include bp($point_3, $point_4) {
+	@include bp($point_3) {
 		font-size: 1.2rem;
 		line-height: 167%;
-	}
-	@include bp($point_4 - 1) {
-		font-size: 1.1rem;
-		line-height: 182%;
 	}
 }
 

@@ -83,6 +83,12 @@
 }
 
 .scrollbar_slider_section__image {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.scrollbar_slider_section__image_in {
 	@extend %cover_img;
 }
 
