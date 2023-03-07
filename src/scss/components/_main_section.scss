@@ -51,13 +51,14 @@
 	@extend %title_style_1_mod;
 
 	margin-top: auto;
+	margin-bottom: auto;
 
 	@include bp($point_3, min) {
 		max-width: 70rem;
 
-		&:not(:last-child) {
-			margin-bottom: 5.6rem;
-		}
+		// &:not(:last-child) {
+		// 	margin-bottom: 5.6rem;
+		// }
 	}
 
 	@include bp($point_3, $point_4) {
@@ -78,6 +79,12 @@
 }
 
 .main_section__btn {
+	position: fixed;
+	bottom: 5rem;
+	left: 5rem;
+
+	z-index: 101;
+
 	@extend %btn_size_2;
 	@extend %blue_btn_1;
 
